@@ -2,7 +2,306 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="836196e5-8862-4a73-b665-395bca0d3001" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/mwbyd.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.babelrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ga" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.prettierignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.prettierrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.roadhogrc.mock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.stylelintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.webpackrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.zh-CN.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/appveyor.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/notices.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/profile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mock/rule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/logo.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ActiveChart/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ActiveChart/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/Authorized.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/AuthorizedRoute.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/CheckPermissions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/CheckPermissions.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/PromiseRender.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/Secured.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/demo/AuthorizedArray.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/demo/AuthorizedFunction.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/demo/secured.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Authorized/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AvatarList/AvatarItem.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AvatarList/demo/simple.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AvatarList/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AvatarList/index.en-US.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AvatarList/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AvatarList/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AvatarList/index.zh-CN.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Bar/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Bar/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/ChartCard/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/ChartCard/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/ChartCard/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Field/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Field/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Field/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Gauge/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Gauge/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/MiniArea/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/MiniArea/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/MiniBar/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/MiniBar/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/MiniProgress/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/MiniProgress/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/MiniProgress/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Pie/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Pie/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Pie/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Radar/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Radar/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/Radar/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/TagCloud/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/TagCloud/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/TagCloud/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/TimelineChart/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/TimelineChart/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/TimelineChart/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/WaterWave/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/WaterWave/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/WaterWave/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/autoHeight.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/bar.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/chart-card.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/gauge.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/mini-area.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/mini-bar.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/mini-pie.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/mini-progress.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/mix.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/pie.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/radar.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/tag-cloud.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/timeline-chart.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/demo/waterwave.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/g2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Charts/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/CountDown/demo/simple.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/CountDown/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/CountDown/index.en-US.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/CountDown/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/CountDown/index.zh-CN.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/Description.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/Description.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/DescriptionList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/demo/vertical.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/DescriptionList/responsive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/EditableItem/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/EditableItem/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/EditableLinkGroup/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/EditableLinkGroup/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Ellipsis/demo/line.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Ellipsis/demo/number.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Ellipsis/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Ellipsis/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Ellipsis/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Ellipsis/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/demo/403.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/demo/404.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/demo/500.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/typeConfig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FooterToolbar/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FooterToolbar/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FooterToolbar/index.en-US.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FooterToolbar/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FooterToolbar/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/FooterToolbar/index.zh-CN.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/GlobalFooter/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/GlobalFooter/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/GlobalFooter/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/GlobalFooter/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/GlobalFooter/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/GlobalHeader/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/GlobalHeader/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HeaderSearch/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HeaderSearch/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HeaderSearch/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HeaderSearch/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HeaderSearch/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/LoginItem.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/LoginSubmit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/LoginTab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/index.en-US.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/index.zh-CN.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Login/map.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/NoticeIconTab.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/NoticeList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/NoticeList.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/demo/popover.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NoticeIcon/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NumberInfo/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NumberInfo/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NumberInfo/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NumberInfo/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/NumberInfo/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/demo/image.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/demo/simple.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/demo/standard.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/demo/structure.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PageHeader/index.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Result/demo/classic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Result/demo/error.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Result/demo/structure.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Result/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Result/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Result/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Result/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SiderMenu/SiderMenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SiderMenu/SilderMenu.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SiderMenu/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/SiderMenu/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/StandardFormRow/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/StandardFormRow/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/StandardTable/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/StandardTable/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TagSelect/TagSelectOption.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TagSelect/demo/expandable.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TagSelect/demo/simple.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TagSelect/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TagSelect/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TagSelect/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TagSelect/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Trend/demo/basic.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Trend/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Trend/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Trend/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Trend/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/_utils/pathTools.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/_utils/pathTools.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/e2e/home.e2e.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/e2e/login.e2e.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/BlankLayout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/PageHeaderLayout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/PageHeaderLayout.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/UserLayout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/UserLayout.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/activities.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/error.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/global.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/monitor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/profile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/project.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/register.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/rule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rollbar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/router.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Analysis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Analysis.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Monitor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Monitor.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Workplace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Dashboard/Workplace.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Exception/403.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Exception/404.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Exception/500.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Exception/style.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Exception/triggerException.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/AdvancedForm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/BasicForm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/StepForm/Step1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/StepForm/Step2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/StepForm/Step3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/StepForm/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/StepForm/style.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/TableForm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Forms/style.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/Applications.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/Applications.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/Articles.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/Articles.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/BasicList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/BasicList.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/CardList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/CardList.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/List.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/Projects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/Projects.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/TableList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/List/TableList.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Profile/AdvancedProfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Profile/AdvancedProfile.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Profile/BasicProfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Profile/BasicProfile.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Result/Error.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Result/Success.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Result/Success.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/User/Login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/User/Login.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/User/Register.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/User/Register.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/User/RegisterResult.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/User/RegisterResult.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/error.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/services/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/Authorized.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/authority.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/request.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/utils.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/run-tests.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ant-design-pro" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,30 +312,47 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ant-design-pro/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>早安，曲丽丽</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/ant-design-pro/src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.ga" />
+        <option value="$PROJECT_DIR$/.editorconfig" />
+        <option value="$PROJECT_DIR$/.eslintrc" />
+        <option value="$PROJECT_DIR$/.prettierignore" />
+        <option value="$PROJECT_DIR$/.prettierrc" />
+        <option value="$PROJECT_DIR$/.babelrc.js" />
+        <option value="$PROJECT_DIR$/ant-design-pro/src/common/menu.js" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/ant-design-pro/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -59,7 +375,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -71,20 +386,25 @@
               <option name="myItemId" value="react-ant-pro" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ant-design-pro" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,6 +418,75 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -110,12 +499,14 @@
       <updated>1523177278422</updated>
       <workItem from="1523177286815" duration="531000" />
       <workItem from="1523177999533" duration="506000" />
-      <workItem from="1523178677870" duration="21000" />
+      <workItem from="1523178677870" duration="1373000" />
+      <workItem from="1523180347993" duration="927000" />
+      <workItem from="1523182317663" duration="798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1058000" />
+    <option name="totallyTimeSpent" value="4135000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -129,14 +520,14 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2550586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2603834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3329453" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -159,11 +550,58 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ant-design-pro/.gitignore">
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/common/menu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/components/CountDown/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/routes/Dashboard/Workplace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5328">
+          <caret line="158" column="26" lean-forward="false" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/mock/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8280">
+          <caret line="230" column="26" lean-forward="false" selection-start-line="230" selection-start-column="26" selection-end-line="230" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/mock/chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/common/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -178,6 +616,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/.ga" />
+    <entry file="file://$PROJECT_DIR$/.eslintrc" />
+    <entry file="file://$PROJECT_DIR$/.prettierignore" />
+    <entry file="file://$PROJECT_DIR$/.prettierrc" />
+    <entry file="file://$PROJECT_DIR$/.editorconfig" />
+    <entry file="file://$PROJECT_DIR$/.babelrc.js" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.zh-CN.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/common/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/mock/chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/mock/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="230" column="26" lean-forward="false" selection-start-line="230" selection-start-column="26" selection-end-line="230" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/routes/Dashboard/Workplace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="158" column="26" lean-forward="false" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/components/CountDown/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant-design-pro/src/common/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding />
         </state>
       </provider>
