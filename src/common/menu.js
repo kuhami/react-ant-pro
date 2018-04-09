@@ -15,7 +15,7 @@ const menuData = [
         path: 'monitor',
       },
       {
-        name: '工作台1',
+        name: '工作台',
         path: 'workplace',
         // hideInBreadcrumb: true,
         // hideInMenu: true,
@@ -130,7 +130,7 @@ const menuData = [
       {
         name: '触发异常',
         path: 'trigger',
-        hideInMenu: true,
+        hideInMenu: false, //显示左侧菜单是否显示
       },
     ],
   },
@@ -138,7 +138,7 @@ const menuData = [
     name: '账户',
     icon: 'user',
     path: 'user',
-    authority: 'guest',
+    // authority: 'guest',//
     children: [
       {
         name: '登录',
@@ -151,6 +151,17 @@ const menuData = [
       {
         name: '注册结果',
         path: 'register-result',
+      },
+    ],
+  },
+  {
+    name: '学习',
+    icon: 'trophy',
+    path: 'study',
+    children: [
+      {
+        name: '测试',
+        path: 'test',
       },
     ],
   },
