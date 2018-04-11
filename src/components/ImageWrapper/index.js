@@ -1,6 +1,3 @@
-/**
- * Created by mwbyd on 2018/4/9.
- */
 // index.js
 import React from 'react';
 import styles from './index.less'; // import style in css modules way

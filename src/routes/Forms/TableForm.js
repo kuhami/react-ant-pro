@@ -43,6 +43,7 @@ export default class TableForm extends PureComponent {
   }
   newMember = () => {
     const newData = this.state.data.map(item => ({ ...item }));
+    console.log(this.state.data);
     newData.push({
       key: `NEW_TEMP_ID_${this.index}`,
       workId: '',
