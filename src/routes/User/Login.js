@@ -16,13 +16,19 @@ export default class LoginPage extends Component {
     type: 'account',
     autoLogin: true,
   };
-
   onTabChange = type => {
     this.setState({ type });
   };
 
   handleSubmit = (err, values) => {
     const { type } = this.state;
+    console.log({
+        type: 'login/login',
+        payload: {
+            ...values,
+            type,
+        },
+    })
     if (!err) {
       this.props.dispatch({
         type: 'login/login',
