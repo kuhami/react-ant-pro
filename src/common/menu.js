@@ -164,8 +164,8 @@ const menuData = [
         path: 'test',
       },
       {
-        name: 'treeCheck',
-        path: 'treeCheck',
+        name: '多功能Table',
+        path: 'Table',
       },
     ],
   },
