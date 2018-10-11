@@ -1,12 +1,15 @@
 import React,{Component} from 'react';
-import { Table, Divider, Tag,Card,Button,Popconfirm } from 'antd';
+import PropTypes from 'prop-types'
+import { Table, Divider, Tag,Card,Button,Popconfirm,Input } from 'antd';
 import ImageWrapper from 'components/ImageWrapper'; // aware of the relative path
 //import TableForm from './TableForm';
 
-export default class TreeCheck extends Component {
+export default class Tables extends Component {
     constructor(props){
       super(props);
       console.log(props)
+
+        const {bordered} = props
         const columns = [{
             title: 'Name',
             dataIndex: 'name',
@@ -20,6 +23,7 @@ export default class TreeCheck extends Component {
             title: 'Address',
             dataIndex: 'address',
             key: 'address',
+            render: input => <Input value={input} />,
         }, {
             title: 'Tags',
             key: 'tags',
@@ -64,7 +68,7 @@ export default class TreeCheck extends Component {
             columns,
             dataSource:data,
             count: 3,
-
+            bordered,
         }
     }
     componentDidMount() {
@@ -78,7 +82,7 @@ export default class TreeCheck extends Component {
             key: count +1,
             name: 'John Brown',
             age: Math.floor(Math.random() * 50),
-            address: 'New York No. 1 Lake Park',
+            address:'张江高科',
             tags: ['nice', 'developer'],
         };
         console.log(newData);
@@ -101,7 +105,7 @@ export default class TreeCheck extends Component {
                 console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
             },
             getCheckboxProps: record => ({
-                disabled: record.name === 'Disabled User', // Column configuration not to be checked
+                disabled: record.name === 'Joe Black', // Column configuration not to be checked
                 name: record.name,
             }),
         };
@@ -115,9 +119,27 @@ export default class TreeCheck extends Component {
                            columns={columns}
                            dataSource={dataSource}
                            loading={false}
-                           bordered={true}
+                           bordered={this.state.bordered}
                     />
                 </Card>
             </div>);
     }
 }
+
+// 组件必须传递参数
+Tables.propTypes = {
+    bordered:PropTypes.bool,
+    // isShowSearch: PropTypes.bool,
+    // spanName: PropTypes.string,
+    // getAllNodes: PropTypes.bool,
+    // divWidth: PropTypes.string,
+    // divHeight: PropTypes.string,
+    // selectTop: PropTypes.string,
+    // checkedKeys: PropTypes.array, // 树默认选中的值
+    // async: PropTypes.bool
+};
+
+// 设置默认属性
+Tables.defaultProps = {
+    bordered:true,//是否展示外边框和列边框
+};
