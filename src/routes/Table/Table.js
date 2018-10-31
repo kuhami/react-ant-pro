@@ -23,7 +23,11 @@ export default class Tables extends Component {
             title: 'Address',
             dataIndex: 'address',
             key: 'address',
-            render: input => <Input value={input} />,
+            render: (input, record) =>{
+                return(
+                    <Input value={input} onChange={(e)=>this.changeInput(e,record)}/>
+                )
+            }
         }, {
             title: 'Tags',
             key: 'tags',
@@ -97,9 +101,17 @@ export default class Tables extends Component {
         const dataSource = [...this.state.dataSource];
         this.setState({ dataSource: dataSource.filter(item => item.key !== key) });
     }
+    //修改input
+    changeInput = (e,record)=>{
+        let {value} = e.target,{key} = record,dataSource = [...this.state.dataSource];
+        dataSource = dataSource.map((v)=>{
+            if(v.key == key ) v.address = value
+            return v
+        })
+        this.setState({ dataSource: dataSource });
+    }
 
     render() {
-        console.log(this);
         const rowSelection = {
             onChange: (selectedRowKeys, selectedRows) => {
                 console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
