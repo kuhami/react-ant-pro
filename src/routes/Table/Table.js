@@ -128,6 +128,7 @@ export default class Tables extends Component {
                         增加
                     </Button>
                     <Table rowSelection={rowSelection}
+                           size="small"
                            columns={columns}
                            dataSource={dataSource}
                            loading={false}
