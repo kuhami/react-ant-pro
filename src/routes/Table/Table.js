@@ -14,6 +14,7 @@ export default class Tables extends Component {
             title: 'Name',
             dataIndex: 'name',
             key: 'name',
+            align:'center',//设置列内容的对齐方式
             render: text => <a href="javascript:;">{text}</a>,
         }, {
             title: 'Age',
