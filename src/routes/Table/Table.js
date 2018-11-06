@@ -20,10 +20,12 @@ export default class Tables extends Component {
             title: 'Age',
             dataIndex: 'age',
             key: 'age',
+            align:'center',
         }, {
             title: 'Address',
             dataIndex: 'address',
             key: 'address',
+            align:'center',
             render: (input, record) =>{
                 return(
                     <Input value={input} onChange={(e)=>this.changeInput(e,record)}/>
@@ -33,6 +35,7 @@ export default class Tables extends Component {
             title: 'Tags',
             key: 'tags',
             dataIndex: 'tags',
+            align:'center',
             render: tags => (<span>{tags.map(tag => <Tag color="blue" key={tag}>{tag}</Tag>)}</span>),
         }, {
             title: '操作',
