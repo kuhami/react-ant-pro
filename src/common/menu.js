@@ -167,6 +167,10 @@ const menuData = [
         name: '多功能Table',
         path: 'Table',
       },
+      {
+        name: 'Hooks',
+        path: 'Hooks',
+      },
     ],
   },
 ];
