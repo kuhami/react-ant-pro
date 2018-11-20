@@ -168,7 +168,7 @@ const menuData = [
         path: 'Table',
       },
       {
-        name: 'Hooks',
+        name: 'React Hooks',
         path: 'Hooks',
       },
     ],
