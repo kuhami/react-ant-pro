@@ -1,9 +1,17 @@
-import React, { Component, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Card, Button } from 'antd';
-function Hooks() {
+function Hooks(props) {
     // Declare a new state variable, which we'll call "count"
+    console.log(props);
     const [count, setCount] = useState(0)
-    console.log(count);
+
+    // Similar to componentDidMount and componentDidUpdate:
+
+    useEffect(() => {
+        // Update the document title using the browser API
+        document.title = `You clicked ${count} times`;
+    });
+
     return (
           <div>
             <Card title="React Hooks"  bordered={false}>
