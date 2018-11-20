@@ -1,4 +1,4 @@
-import React,{Component,useState} from 'react';
+import React,{Component} from 'react';
 import PropTypes from 'prop-types'
 import { Table, Divider, Tag,Card,Button,Popconfirm,Input } from 'antd';
 import ImageWrapper from 'components/ImageWrapper'; // aware of the relative path
