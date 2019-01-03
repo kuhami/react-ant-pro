@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import ImageWrapper from 'components/ImageWrapper'; // aware of the relative path
-import TableForm from './TableForm';
 
 export default () => (
   <div>
