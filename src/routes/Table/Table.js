@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types'
-import { Table, Divider, Tag,Card,Button,Popconfirm,Input } from 'antd';
+import { Table, Divider, Tag,Card,Button,Popconfirm,Input,Skeleton } from 'antd';
 import ImageWrapper from 'components/ImageWrapper'; // aware of the relative path
 //import TableForm from './TableForm';
 
@@ -128,20 +128,24 @@ export default class Tables extends Component {
             }),
         };
         const {columns,dataSource} = this.state;
-        return (<div>
+        return (
+            <div>
                 <Card title="多功能Table"  bordered={false}>
-                    <Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>
-                        增加
-                    </Button>
-                    <Table rowSelection={rowSelection}
-                           size="small"
-                           columns={columns}
-                           dataSource={dataSource}
-                           loading={false}
-                           bordered={this.state.bordered}
-                    />
+                    <Skeleton loading={false} title = {'我是title'} active={true} avatar={true} paragraph={{ rows: 4 }}>
+                            <Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>
+                                增加
+                            </Button>
+                            <Table rowSelection={rowSelection}
+                                   size="small"
+                                   columns={columns}
+                                   dataSource={dataSource}
+                                   loading={false}
+                                   bordered={this.state.bordered}
+                            />
+                    </Skeleton>
                 </Card>
-            </div>);
+            </div>
+        );
     }
 }
 
