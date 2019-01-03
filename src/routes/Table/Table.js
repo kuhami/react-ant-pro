@@ -1,8 +1,7 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types'
 import { Table, Divider, Tag,Card,Button,Popconfirm,Input,Skeleton } from 'antd';
-import ImageWrapper from 'components/ImageWrapper'; // aware of the relative path
-//import TableForm from './TableForm';
+import TreeCheck from 'components/TreeCheck'; // aware of the relative path
 
 export default class Tables extends Component {
     constructor(props){
@@ -115,6 +114,10 @@ export default class Tables extends Component {
         this.setState({ dataSource: dataSource });
     }
 
+    onCheckedKeyChange = (checkedArrs)=>{
+        console.log(checkedArrs);
+    }
+
     render() {
         // const [count, setCount] = useState(0)
         // console.log(count);
@@ -128,6 +131,41 @@ export default class Tables extends Component {
             }),
         };
         const {columns,dataSource} = this.state;
+        const treeData = [{
+            label: '0-0',
+            value: '0-0',
+            children: [{
+                label: '0-0-0',
+                value: '0-0-0',
+                children: [
+                    { label: '0-0-0-0', value: '0-0-0-0' },
+                    { label: '0-0-0-1', value: '0-0-0-1' },
+                    { label: '0-0-0-2', value: '0-0-0-2' },
+                ],
+            }, {
+                label: '0-0-1',
+                value: '0-0-1',
+                children: [
+                    { label: '0-0-1-0', value: '0-0-1-0' },
+                    { label: '0-0-1-1', value: '0-0-1-1' },
+                    { label: '0-0-1-2', value: '0-0-1-2' },
+                ],
+            }, {
+                label: '0-0-2',
+                value: '0-0-2',
+            }],
+        }, {
+            label: '0-1',
+            value: '0-1',
+            children: [
+                { label: '0-1-0-0', value: '0-1-0-0' },
+                { label: '0-1-0-1', value: '0-1-0-1' },
+                { label: '0-1-0-2', value: '0-1-0-2' },
+            ],
+        }, {
+            label: '0-2',
+            value: '0-2',
+        }];
         return (
             <div>
                 <Card title="多功能Table"  bordered={false}>
@@ -143,6 +181,15 @@ export default class Tables extends Component {
                                    bordered={this.state.bordered}
                             />
                     </Skeleton>
+
+                    <TreeCheck
+                        treeData={treeData}
+                        //isShowSearch={true}
+                        spanName={'多选Selec：'}
+                        getAllNodes={false}
+                        selectTop="36px"
+                        onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
+
                 </Card>
             </div>
         );
