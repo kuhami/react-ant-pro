@@ -132,39 +132,43 @@ export default class Tables extends Component {
         };
         const {columns,dataSource} = this.state;
         const treeData = [{
-            label: '0-0',
-            value: '0-0',
-            children: [{
-                label: '0-0-0',
-                value: '0-0-0',
+            label: '全部',
+            value: 'all',
+            children:[{
+                label: '0-0',
+                value: '0-0',
+                children: [{
+                    label: '0-0-0',
+                    value: '0-0-0',
+                    children: [
+                        { label: '0-0-0-0', value: '0-0-0-0' },
+                        { label: '0-0-0-1', value: '0-0-0-1' },
+                        { label: '0-0-0-2', value: '0-0-0-2' },
+                    ],
+                }, {
+                    label: '0-0-1',
+                    value: '0-0-1',
+                    children: [
+                        { label: '0-0-1-0', value: '0-0-1-0' },
+                        { label: '0-0-1-1', value: '0-0-1-1' },
+                        { label: '0-0-1-2', value: '0-0-1-2' },
+                    ],
+                }, {
+                    label: '0-0-2',
+                    value: '0-0-2',
+                }],
+            }, {
+                label: '0-1',
+                value: '0-1',
                 children: [
-                    { label: '0-0-0-0', value: '0-0-0-0' },
-                    { label: '0-0-0-1', value: '0-0-0-1' },
-                    { label: '0-0-0-2', value: '0-0-0-2' },
+                    { label: '0-1-0-0', value: '0-1-0-0' },
+                    { label: '0-1-0-1', value: '0-1-0-1' },
+                    { label: '0-1-0-2', value: '0-1-0-2' },
                 ],
             }, {
-                label: '0-0-1',
-                value: '0-0-1',
-                children: [
-                    { label: '0-0-1-0', value: '0-0-1-0' },
-                    { label: '0-0-1-1', value: '0-0-1-1' },
-                    { label: '0-0-1-2', value: '0-0-1-2' },
-                ],
-            }, {
-                label: '0-0-2',
-                value: '0-0-2',
-            }],
-        }, {
-            label: '0-1',
-            value: '0-1',
-            children: [
-                { label: '0-1-0-0', value: '0-1-0-0' },
-                { label: '0-1-0-1', value: '0-1-0-1' },
-                { label: '0-1-0-2', value: '0-1-0-2' },
-            ],
-        }, {
-            label: '0-2',
-            value: '0-2',
+                label: '0-2',
+                value: '0-2',
+            }]
         }];
         return (
             <div>
@@ -184,7 +188,7 @@ export default class Tables extends Component {
 
                     <TreeCheck
                         treeData={treeData}
-                        //isShowSearch={true}
+                        isShowSearch={true}
                         spanName={'多选Selec：'}
                         getAllNodes={false}
                         selectTop="36px"

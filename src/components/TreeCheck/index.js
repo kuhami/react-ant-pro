@@ -30,7 +30,7 @@ export default class TreeCheck extends Component {
     const { spanName, treeData, isShowSearch } = props;
     const expandedKeys = treeData[0].children.map(n => n.value);
 
-    let treeList = treeData;
+    let treeList = this.updateTreeList(treeData);
 
     this.state = {
       treeData,
@@ -74,7 +74,6 @@ export default class TreeCheck extends Component {
     e.preventDefault();
     let dom = ReactDOM.findDOMNode(this);
     let document = ReactDOM.findDOMNode(this).ownerDocument;
-    console.log($(dom));
     let isHide = $(dom)
       .find('div.ant-dropdown')
       .hasClass('hide');
@@ -185,24 +184,22 @@ export default class TreeCheck extends Component {
     let treeData = data;
     let treeList = [];
     // 递归获取树列表
-    const getTreeList = (data, parent = {}) => {
-      data.forEach(node => {
-        console.log(node, node.children);
-        node.parent = parent;
-        //node = node.set('parent', parent);
-        treeList = treeList.push(node);
-        // if (node.children && node.children.length > 0) {
-        //     getTreeList(node.get('children'), (parent.set(node.get('value'), '')));
-        // }
-      });
+    const getTreeList = (data) => {
+        data.forEach(node => {
+            node = Object.assign(node,{'parent':node.value})
+            //console.log(node);
+            treeList.push({'value':node.parent});
+            if (node.children && node.children.length > 0) {
+                getTreeList(node.children);
+            }
+        });
     };
     getTreeList(treeData);
-
-    return treeList;
+      return treeList;
   };
 
   onExpand = expandedKeys => {
-    //console.log('onExpand', arguments);
+    //console.log('onExpand', expandedKeys);
     // if not set autoExpandParent to false, if children expanded, parent can not collapse.
     // or, you can remove all expanded children keys.
     this.setState({
@@ -247,31 +244,23 @@ export default class TreeCheck extends Component {
   onChange = e => {
     const value = e.target.value;
     const { treeList } = this.state;
-    const getParentKey = (key, tree) => {
-      let parentKey;
-      for (let i = 0; i < tree.length; i++) {
-        const node = tree[i];
-        if (node.children) {
-          if (node.children.some(item => item.key === key)) {
-            parentKey = node.key;
-          } else if (getParentKey(key, node.children)) {
-            parentKey = getParentKey(key, node.children);
-          }
-        }
+    let uniqueExpandedKeys = [];
+
+      if (value) {
+          // 遍历树列表获取被搜索匹配到的树父id
+          treeList.map((item) => {
+              if (item.value && item.value.indexOf(value) > -1) {
+                  uniqueExpandedKeys.push(item.value);
+              }
+          });
       }
-      return parentKey;
-    };
-    const expandedKeys = treeList
-      .map(item => {
-        console.log(item);
-        if (item.label.indexOf(value) > -1) {
-          return getParentKey(item.key, []);
-        }
-        return null;
-      })
-      .filter((item, i, self) => item && self.indexOf(item) === i);
-    this.setState({
-      expandedKeys,
+      else {
+          treeList.map((item) => {
+              uniqueExpandedKeys.push(item.value);
+          });
+      }
+      this.setState({
+      expandedKeys:uniqueExpandedKeys,
       searchValue: value,
       autoExpandParent: true,
     });
