@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types'
-import { Table, Divider, Tag,Card,Button,Popconfirm,Input,Skeleton } from 'antd';
+import { Table,Card } from 'antd';
 import TreeCheck from 'components/TreeCheck'; // aware of the relative path
 
 export default class Components extends Component {
@@ -194,6 +194,12 @@ export default class Components extends Component {
             explain: '下拉菜单和选择器同宽',
             type: 'bool',
             Default: 'false',
+        }, {
+            key: '14',
+            Param: 'multiple',
+            explain: '下拉选框是否多选',
+            type: 'bool',
+            Default: 'true',
         }];
         return (
             <div>
@@ -206,6 +212,7 @@ export default class Components extends Component {
                         //LabelAndValue={['title','key']}
                         //checkedKeys={['00','01']}
                         onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
+
                     <h3>API</h3>
                     <p>TreeCheck 为多选SelectTree，本组件为适应特殊场景而封装。</p>
                     <Table columns={columns} dataSource={data} pagination={false} />

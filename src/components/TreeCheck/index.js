@@ -36,7 +36,7 @@ export default class TreeCheck extends Component {
       expandedKeys, //默认展开第一级
       autoExpandParent: true,
       checkedKeys: this.props.checkedKeys,
-      selectedKeys: [],
+      selectedKeys: this.props.selectedKeys,
       SelectKey: (this.props.checkedKeys.length > 0 && '选中了' + this.props.checkedKeys.length + '项') || '全部',
       searchValue: '',
       isIcon: false,
@@ -227,7 +227,8 @@ export default class TreeCheck extends Component {
   };
 
   onCheck = (checkedKeys, e) => {
-    let len = 0,
+      console.log(checkedKeys, e);
+      let len = 0,
       lenValue,
       checkedArrs = [];
     this.setState({ checkedKeys });
@@ -254,6 +255,19 @@ export default class TreeCheck extends Component {
           : len == '1' && !this.props.getAllNodes ? lenValue : '选中' + len + '项',
     });
   };
+
+  onSelect = (selectedKeys,e) => {
+    const {multiple} = this.props;
+
+    if(!multiple){
+        this.onCheckedKeyChange(selectedKeys);
+        this.setState({
+            selectedKeys,
+            SelectKey:e.selectedNodes[0] ? e.selectedNodes[0].props.title.props.children[2]:'全部'
+        });
+    }
+
+  }
 
   onChange = e => {
     const value = e.target.value;
@@ -329,18 +343,24 @@ export default class TreeCheck extends Component {
       textAlign: 'right',
     };
     const { treeData } = this.state;
-    const { dropdownMatchSelectWidth } = this.props;
+    const { dropdownMatchSelectWidth,multiple } = this.props;
     const minWidth = dropdownMatchSelectWidth ? {width: 200}:{minWidth:200};
 
     const treeProps = {
-      checkable: true,
+      checkable: multiple,
       onExpand: this.onExpand,
       expandedKeys: this.state.expandedKeys,
       autoExpandParent: this.state.autoExpandParent,
       onCheck: this.onCheck,
       checkedKeys: this.state.checkedKeys,
       selectedKeys: this.state.selectedKeys,
+      onSelect:this.onSelect
     };
+
+    // const onSelect ={
+    //     onSelect:this.onSelect()
+    // }
+
 
       return (
       <div style={linkStyle}>
@@ -389,8 +409,10 @@ TreeCheck.propTypes = {
   divHeight: PropTypes.string,
   selectTop: PropTypes.string,
   maxHeight: PropTypes.string,
-  checkedKeys: PropTypes.array, // 树默认选中的值
+  checkedKeys: PropTypes.array, // 多选树默认选中的值
+  selectedKeys: PropTypes.array, // 单选树默认选中的值
   LabelAndValue: PropTypes.array, //treeData数据中不是label和value的要转化
+  multiple:PropTypes.bool,
 };
 
 // 设置默认属性
@@ -409,5 +431,7 @@ TreeCheck.defaultProps = {
   selectTop: '36px',
   maxHeight: '400px',
   checkedKeys: [],
-  LabelAndValue:['label','value']
+  selectedKeys:[],
+  LabelAndValue:['label','value'],
+  multiple:true
 };
