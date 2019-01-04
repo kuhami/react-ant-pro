@@ -281,8 +281,6 @@ export default class TreeCheck extends Component {
 
   renderTreeNodes = data => {
     const { searchValue } = this.state;
-    const { async } = this.props;
-
     return data.map(item => {
       const index = item.label && item.label.indexOf(searchValue);
       const beforeStr = item.label && item.label.substr(0, index);
@@ -304,15 +302,7 @@ export default class TreeCheck extends Component {
           </TreeNode>
         );
       }
-
-      if (async)
-        return (
-          <TreeNode
-            {...{ title: title, key: item.value }}
-            isLeaf={!item.hasOwnProperty('child') || item.child.length == 0}
-          />
-        );
-      else return <TreeNode {...{ title: title, key: item.value }} />;
+        return <TreeNode {...{ title: title, key: item.value }} />;
     });
   };
 
@@ -339,7 +329,7 @@ export default class TreeCheck extends Component {
       textAlign: 'right',
     };
     const { treeData } = this.state;
-    const { async,dropdownMatchSelectWidth } = this.props;
+    const { dropdownMatchSelectWidth } = this.props;
     const minWidth = dropdownMatchSelectWidth ? {width: 200}:{minWidth:200};
 
     const treeProps = {
@@ -352,14 +342,6 @@ export default class TreeCheck extends Component {
       selectedKeys: this.state.selectedKeys,
     };
 
-    if (async) {
-      treeProps.loadData = node => {
-        return new Promise(resolve => {
-          resolve();
-          return;
-        });
-      };
-    }
       return (
       <div style={linkStyle}>
         <span style={spanStyle}>{this.state.spanName}</span>
@@ -408,7 +390,6 @@ TreeCheck.propTypes = {
   selectTop: PropTypes.string,
   maxHeight: PropTypes.string,
   checkedKeys: PropTypes.array, // 树默认选中的值
-  async: PropTypes.bool,
   LabelAndValue: PropTypes.array, //treeData数据中不是label和value的要转化
 };
 
@@ -421,7 +402,6 @@ TreeCheck.defaultProps = {
   onCheckedKeyChange: function() {
     //选中节点输出
   },
-  async: true,
   getAllNodes: false, //是否选取所有节点 false：只选子节点
   divWidth: '300px',
   dropdownMatchSelectWidth:false,
