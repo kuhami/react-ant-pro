@@ -6,7 +6,6 @@ import TreeCheck from 'components/TreeCheck'; // aware of the relative path
 export default class Components extends Component {
     constructor(props){
         super(props);
-        console.log(props)
 
     }
     componentDidMount() {
@@ -19,7 +18,6 @@ export default class Components extends Component {
     }
 
     render() {
-
 
         const treeDatas = [{
             title: '0-0',
@@ -110,7 +108,6 @@ export default class Components extends Component {
             dataIndex: 'type',
             key: 'type',
             render: (text,record) => {
-                console.log(text,record);
                 return <a href="https://github.com/kuhami/react-ant-pro/blob/master/src/components/TreeCheck/index.js"  style={{color:'#c41d7f'}}>{text}</a>
             },
         }, {
@@ -139,48 +136,54 @@ export default class Components extends Component {
             Default: 'false',
         }, {
             key: '4',
+            Param: 'placeholder',
+            explain: '搜索框的placeholder值',
+            type: 'string',
+            Default: 'Search...',
+        }, {
+            key: '5',
             Param: 'getAllNodes',
             explain: '是否选取所有节点，true：选取所有的节点，false：只选子节点',
             type: 'bool',
             Default: 'false',
         }, {
-            key: '5',
+            key: '6',
             Param: 'divWidth',
             explain: 'TreeCheck的宽度',
             type: 'string',
             Default: '300px',
         },{
-            key: '6',
+            key: '7',
             Param: 'divHeight', //参数
             explain: 'TreeCheck的高度', //说明
             type: 'string', //类型
             Default: '50px', //默认值
         }, {
-            key: '7',
+            key: '8',
             Param: 'selectTop',
             explain: '下拉选框的距离button的高度',
             type: 'string',
             Default: '36px',
         }, {
-            key: '8',
+            key: '9',
             Param: 'maxHeight',
             explain: '下拉选框的最大高度',
             type: 'string',
             Default: '400px',
         }, {
-            key: '9',
+            key: '10',
             Param: 'checkedKeys',
             explain: '下拉选框默认选种的节点',
             type: 'array',
             Default: '[ ]',
         }, {
-            key: '10',
+            key: '11',
             Param: 'LabelAndValue',
             explain: 'treeData中需要label和value两个值，若没有label和value，则该属性可以转化',
             type: 'array',
             Default: '["label","value"]',
         }, {
-            key: '11',
+            key: '12',
             Param: 'onCheckedKeyChange',
             explain: 'TreeCheck 被选中节点时的回调',
             type: 'function(checkedArrs)',
@@ -195,6 +198,7 @@ export default class Components extends Component {
                         spanName={'多选Select：'}
                         getAllNodes={true}
                         //LabelAndValue={['title','key']}
+                        //checkedKeys={['00','01']}
                         onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
                     <h3>API</h3>
                     <p>TreeCheck 为多选SelectTree，本组件为适应特殊场景而封装。</p>

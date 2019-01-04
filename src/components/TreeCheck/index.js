@@ -37,9 +37,7 @@ export default class TreeCheck extends Component {
       autoExpandParent: true,
       checkedKeys: this.props.checkedKeys,
       selectedKeys: [],
-      SelectKey:
-        (this.props.checkedKeys.length > 0 && '选中了' + this.props.checkedKeys.length + '项') ||
-        '全部',
+      SelectKey: (this.props.checkedKeys.length > 0 && '选中了' + this.props.checkedKeys.length + '项') || '全部',
       searchValue: '',
       isIcon: false,
       spanName,
@@ -361,8 +359,7 @@ export default class TreeCheck extends Component {
         });
       };
     }
-
-    return (
+      return (
       <div style={linkStyle}>
         <span style={spanStyle}>{this.state.spanName}</span>
         <span style={{ position: 'relative', display: 'inline-block' }}>
@@ -382,7 +379,7 @@ export default class TreeCheck extends Component {
               {this.state.isShowSearch && (
                 <Search
                   style={{ width: '94%', margin: '2% 3% 0 3%' }}
-                  placeholder="请搜索......"
+                  placeholder={this.props.placeholder}
                   onChange={this.onChange}
                 />
               )}
@@ -401,6 +398,7 @@ export default class TreeCheck extends Component {
 TreeCheck.propTypes = {
   treeData: PropTypes.array,
   isShowSearch: PropTypes.bool,
+  placeholder: PropTypes.string,
   spanName: PropTypes.string,
   getAllNodes: PropTypes.bool,
   divWidth: PropTypes.string,
@@ -416,6 +414,7 @@ TreeCheck.propTypes = {
 TreeCheck.defaultProps = {
   treeData: [],
   isShowSearch: false, //默认不显示搜索框
+  placeholder: 'Search...',
   spanName: '',
   onCheckedKeyChange: function() {
     //选中节点输出
