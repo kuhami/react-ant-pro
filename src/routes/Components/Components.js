@@ -108,7 +108,11 @@ export default class Components extends Component {
         }, {
             title: '类型',
             dataIndex: 'type',
-            key: 'type',
+            key: 'type',//c41d7f
+            render: (text,record) => {
+                console.log(text,record);
+                return <a href=""  style={{color:'#c41d7f'}}>{text}</a>
+            },
         }, {
             title: '默认值',
             key: 'Default',

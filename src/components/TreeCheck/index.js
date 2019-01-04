@@ -1,5 +1,6 @@
 /**
- * Created by mwbyd on 2019/1/3.
+ * Created by lyl on 2019/1/3.
+ * email: 776248185@qq.com
  */
 /**
  * 多选树
@@ -11,9 +12,6 @@
                 {label: "秦小厨集团", value: "秦小厨集团",…}
             ],
         }];
- * Created by lyl on 2018/6/26.
- *
- * 声明：本插件设计单据较多 ，如有修改请在群里告知 2018/12/19.
  *
  */
 import ReactDOM from 'react-dom';
