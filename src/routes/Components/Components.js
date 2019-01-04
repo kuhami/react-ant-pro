@@ -108,10 +108,10 @@ export default class Components extends Component {
         }, {
             title: '类型',
             dataIndex: 'type',
-            key: 'type',//c41d7f
+            key: 'type',
             render: (text,record) => {
                 console.log(text,record);
-                return <a href=""  style={{color:'#c41d7f'}}>{text}</a>
+                return <a href="https://github.com/kuhami/react-ant-pro/blob/master/src/components/TreeCheck/index.js"  style={{color:'#c41d7f'}}>{text}</a>
             },
         }, {
             title: '默认值',
@@ -140,7 +140,7 @@ export default class Components extends Component {
         }, {
             key: '4',
             Param: 'getAllNodes',
-            explain: '是否选取所有节点 true:选取所有的节点，false：只选子节点',
+            explain: '是否选取所有节点，true：选取所有的节点，false：只选子节点',
             type: 'bool',
             Default: 'false',
         }, {
@@ -198,7 +198,7 @@ export default class Components extends Component {
                         onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
                     <h3>API</h3>
                     <p>TreeCheck 为多选SelectTree，本组件为适应特殊场景而封装。</p>
-                    <Table columns={columns} dataSource={data} />
+                    <Table columns={columns} dataSource={data} pagination={false} />
                 </Card>
             </div>
         );
