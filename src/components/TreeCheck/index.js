@@ -339,7 +339,8 @@ export default class TreeCheck extends Component {
       textAlign: 'right',
     };
     const { treeData } = this.state;
-    const { async } = this.props;
+    const { async,dropdownMatchSelectWidth } = this.props;
+    const minWidth = dropdownMatchSelectWidth ? {width: 200}:{minWidth:200};
 
     const treeProps = {
       checkable: true,
@@ -373,7 +374,7 @@ export default class TreeCheck extends Component {
           <div
             className="ant-dropdown hide"
             onClick={this.handeDown}
-            style={{ minWidth: 200, top: this.props.selectTop, left: 0 }}
+            style={{ ...minWidth,top: this.props.selectTop, left: 0 }}
           >
             <div className="ant-dropdown-menu">
               {this.state.isShowSearch && (
@@ -402,6 +403,7 @@ TreeCheck.propTypes = {
   spanName: PropTypes.string,
   getAllNodes: PropTypes.bool,
   divWidth: PropTypes.string,
+  dropdownMatchSelectWidth:PropTypes.bool,
   divHeight: PropTypes.string,
   selectTop: PropTypes.string,
   maxHeight: PropTypes.string,
@@ -422,6 +424,7 @@ TreeCheck.defaultProps = {
   async: true,
   getAllNodes: false, //是否选取所有节点 false：只选子节点
   divWidth: '300px',
+  dropdownMatchSelectWidth:false,
   divHeight: '50px',
   selectTop: '36px',
   maxHeight: '400px',

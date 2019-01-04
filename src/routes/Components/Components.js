@@ -119,7 +119,7 @@ export default class Components extends Component {
         const data = [{
             key: '1',
             Param: 'spanName', //参数
-            explain: 'TreeCheck 添加标题', //说明
+            explain: 'TreeCheck 选择器头部添加span标签', //说明
             type: 'string', //类型
             Default: '-', //默认值
         }, {
@@ -188,6 +188,12 @@ export default class Components extends Component {
             explain: 'TreeCheck 被选中节点时的回调',
             type: 'function(checkedArrs)',
             Default: '-',
+        }, {
+            key: '13',
+            Param: 'dropdownMatchSelectWidth',
+            explain: '下拉菜单和选择器同宽',
+            type: 'bool',
+            Default: 'false',
         }];
         return (
             <div>
