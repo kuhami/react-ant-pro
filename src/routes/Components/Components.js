@@ -8,129 +8,18 @@ export default class Components extends Component {
         super(props);
         console.log(props)
 
-        const {bordered} = props
-        const columns = [{
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
-            align:'center',//设置列内容的对齐方式
-            render: text => <a href="javascript:;">{text}</a>,
-        }, {
-            title: 'Age',
-            dataIndex: 'age',
-            key: 'age',
-            align:'center',
-        }, {
-            title: 'Address',
-            dataIndex: 'address',
-            key: 'address',
-            align:'center',
-            render: (input, record) =>{
-                return(
-                    <Input value={input} onChange={(e)=>this.changeInput(e,record)}/>
-                )
-            }
-        }, {
-            title: 'Tags',
-            key: 'tags',
-            dataIndex: 'tags',
-            align:'center',
-            render: tags => (<span>{tags.map(tag => <Tag color="blue" key={tag}>{tag}</Tag>)}</span>),
-        }, {
-            title: '操作',
-            key: 'action',
-            render: (text, record) =>{
-                return(
-                    this.state.dataSource.length > 1
-                        ? (
-                        <Popconfirm title="确认删除?" onConfirm={() => this.handleDelete(record.key)}>
-                            <a href="javascript:;">删除</a>
-                        </Popconfirm>
-                    ) : null
-                )
-            },
-        }];
-
-        const data = [{
-            key: '1',
-            name: 'John Brown',
-            age: 32,
-            address: 'New York No. 1 Lake Park',
-            tags: ['nice', 'developer'],
-        }, {
-            key: '2',
-            name: 'Jim Green',
-            age: 42,
-            address: 'London No. 1 Lake Park',
-            tags: ['loser'],
-        }, {
-            key: '3',
-            name: 'Joe Black',
-            age: 32,
-            address: 'Sidney No. 1 Lake Park',
-            tags: ['cool', 'teacher'],
-        }];
-
-        this.state={
-            columns,
-            dataSource:data,
-            count: 3,
-            bordered,
-        }
     }
     componentDidMount() {
 
     }
-    //增加行
-    handleAdd =()=>{
-        const { count, dataSource } = this.state;
-        console.log(dataSource);
-        const newData = {
-            key: count +1,
-            name: 'John Brown',
-            age: Math.floor(Math.random() * 50),
-            address:'张江高科',
-            tags: ['nice', 'developer'],
-        };
-        console.log(newData);
-        this.setState({
-            dataSource: [...dataSource, newData],
-            count: count + 1,
-        });
-    }
 
-    //删除行
-    handleDelete = (key) => {
-        const dataSource = [...this.state.dataSource];
-        this.setState({ dataSource: dataSource.filter(item => item.key !== key) });
-    }
-    //修改input
-    changeInput = (e,record)=>{
-        let {value} = e.target,{key} = record,dataSource = [...this.state.dataSource];
-        dataSource = dataSource.map((v)=>{
-            if(v.key == key ) v.address = value
-            return v
-        })
-        this.setState({ dataSource: dataSource });
-    }
 
     onCheckedKeyChange = (checkedArrs)=>{
         console.log(checkedArrs);
     }
 
     render() {
-        // const [count, setCount] = useState(0)
-        // console.log(count);
-        const rowSelection = {
-            onChange: (selectedRowKeys, selectedRows) => {
-                console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-            },
-            getCheckboxProps: record => ({
-                disabled: record.name === 'Joe Black', // Column configuration not to be checked
-                name: record.name,
-            }),
-        };
-        const {columns,dataSource} = this.state;
+
 
         const treeDatas = [{
             title: '0-0',
@@ -177,7 +66,7 @@ export default class Components extends Component {
                     label: '0-0-0',
                     value: '000',
                     children: [
-                        { label: '0-0-0-0', value: '0000' },
+                        { label: '0-0-0-0-0-0-0-0-0-0-0', value: '0000' },
                         { label: '0-0-0-1', value: '0001' },
                         { label: '0-0-0-2', value: '0002' },
                     ],
@@ -206,31 +95,106 @@ export default class Components extends Component {
                 value: '02',
             }]
         }];
+
+        const columns = [{
+            title: '参数	',
+            dataIndex: 'Param',
+            key: 'Param',
+            render: text => <a href="javascript:;">{text}</a>,
+        }, {
+            title: '说明',
+            dataIndex: 'explain',
+            key: 'explain',
+        }, {
+            title: '类型',
+            dataIndex: 'type',
+            key: 'type',
+        }, {
+            title: '默认值',
+            key: 'Default',
+            dataIndex: 'Default',
+        }];
+
+        const data = [{
+            key: '1',
+            Param: 'spanName', //参数
+            explain: 'TreeCheck 添加标题', //说明
+            type: 'string', //类型
+            Default: '-', //默认值
+        }, {
+            key: '2',
+            Param: 'treeData',
+            explain: 'treeData 为 TreeCheck的JSON格式',
+            type: 'array',
+            Default: '[ ]',
+        }, {
+            key: '3',
+            Param: 'isShowSearch',
+            explain: '是否显示搜索框',
+            type: 'bool',
+            Default: 'false',
+        }, {
+            key: '4',
+            Param: 'getAllNodes',
+            explain: '是否选取所有节点 true:选取所有的节点，false：只选子节点',
+            type: 'bool',
+            Default: 'false',
+        }, {
+            key: '5',
+            Param: 'divWidth',
+            explain: 'TreeCheck的宽度',
+            type: 'string',
+            Default: '300px',
+        },{
+            key: '6',
+            Param: 'divHeight', //参数
+            explain: 'TreeCheck的高度', //说明
+            type: 'string', //类型
+            Default: '50px', //默认值
+        }, {
+            key: '7',
+            Param: 'selectTop',
+            explain: '下拉选框的距离button的高度',
+            type: 'string',
+            Default: '36px',
+        }, {
+            key: '8',
+            Param: 'maxHeight',
+            explain: '下拉选框的最大高度',
+            type: 'string',
+            Default: '400px',
+        }, {
+            key: '9',
+            Param: 'checkedKeys',
+            explain: '下拉选框默认选种的节点',
+            type: 'array',
+            Default: '[ ]',
+        }, {
+            key: '10',
+            Param: 'LabelAndValue',
+            explain: 'treeData中需要label和value两个值，若没有label和value，则该属性可以转化',
+            type: 'array',
+            Default: '["label","value"]',
+        }, {
+            key: '11',
+            Param: 'onCheckedKeyChange',
+            explain: 'TreeCheck 被选中节点时的回调',
+            type: 'function(checkedArrs)',
+            Default: '-',
+        }];
         return (
             <div>
-                <Card title="多功能Table"  bordered={false}>
-                    {/*<Skeleton loading={false} title = {'我是title'} active={true} avatar={true} paragraph={{ rows: 4 }}>*/}
-                        {/*<Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>*/}
-                            {/*增加*/}
-                        {/*</Button>*/}
-                        {/*<Table rowSelection={rowSelection}*/}
-                               {/*size="small"*/}
-                               {/*columns={columns}*/}
-                               {/*dataSource={dataSource}*/}
-                               {/*loading={false}*/}
-                               {/*bordered={this.state.bordered}*/}
-                        {/*/>*/}
-                    {/*</Skeleton>*/}
-
+                <Card title="多选SelectTree"  bordered={false}>
                     <TreeCheck
                         treeData={treeData}
                         isShowSearch={true}
-                        spanName={'多选Selec：'}
+                        spanName={'多选Select：'}
                         getAllNodes={true}
                         //LabelAndValue={['title','key']}
-                        selectTop="36px"
                         onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
-
+                    <h3>API</h3>
+                    <p>TreeCheck 为多选SelectTree，本组件为适应特殊场景而封装。</p>
+                    <Table columns={columns} dataSource={data} />
                 </Card>
             </div>
         );

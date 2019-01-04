@@ -27,7 +27,7 @@ const Search = Input.Search;
 export default class TreeCheck extends Component {
   constructor(props) {
     super(props);
-    let { spanName, treeData, isShowSearch } = props;
+    let { spanName, treeData, isShowSearch,maxHeight } = props;
     const expandedKeys = treeData[0].children.map(n => n.value);
 
     treeData = this.changeTreeList(treeData, props.LabelAndValue);
@@ -47,6 +47,7 @@ export default class TreeCheck extends Component {
       spanName,
       isShowSearch,
       treeList,
+      maxHeight
     };
   }
 
@@ -387,7 +388,7 @@ export default class TreeCheck extends Component {
                   onChange={this.onChange}
                 />
               )}
-              <div style={{ maxHeight: 400, overflow: 'auto', minHeight: 0 }}>
+              <div style={{ maxHeight: this.state.maxHeight, overflow: 'auto', minHeight: 0 }}>
                 <Tree {...treeProps}>{this.renderTreeNodes(treeData)}</Tree>
               </div>
             </div>
@@ -407,6 +408,7 @@ TreeCheck.propTypes = {
   divWidth: PropTypes.string,
   divHeight: PropTypes.string,
   selectTop: PropTypes.string,
+  maxHeight: PropTypes.string,
   checkedKeys: PropTypes.array, // 树默认选中的值
   async: PropTypes.bool,
   LabelAndValue: PropTypes.array, //treeData数据中不是label和value的要转化
@@ -424,7 +426,8 @@ TreeCheck.defaultProps = {
   getAllNodes: false, //是否选取所有节点 false：只选子节点
   divWidth: '300px',
   divHeight: '50px',
-  selectTop: '42px',
+  selectTop: '36px',
+  maxHeight: '400px',
   checkedKeys: [],
   LabelAndValue:['label','value']
 };
