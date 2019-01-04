@@ -136,38 +136,38 @@ export default class Tables extends Component {
             value: 'all',
             children:[{
                 label: '0-0',
-                value: '0-0',
+                value: '00',
                 children: [{
                     label: '0-0-0',
-                    value: '0-0-0',
+                    value: '000',
                     children: [
-                        { label: '0-0-0-0', value: '0-0-0-0' },
-                        { label: '0-0-0-1', value: '0-0-0-1' },
-                        { label: '0-0-0-2', value: '0-0-0-2' },
+                        { label: '0-0-0-0', value: '0000' },
+                        { label: '0-0-0-1', value: '0001' },
+                        { label: '0-0-0-2', value: '0002' },
                     ],
                 }, {
                     label: '0-0-1',
-                    value: '0-0-1',
+                    value: '001',
                     children: [
-                        { label: '0-0-1-0', value: '0-0-1-0' },
-                        { label: '0-0-1-1', value: '0-0-1-1' },
-                        { label: '0-0-1-2', value: '0-0-1-2' },
+                        { label: '0-0-1-0', value: '0010' },
+                        { label: '0-0-1-1', value: '0011' },
+                        { label: '0-0-1-2', value: '0012' },
                     ],
                 }, {
                     label: '0-0-2',
-                    value: '0-0-2',
+                    value: '002',
                 }],
             }, {
                 label: '0-1',
-                value: '0-1',
+                value: '01',
                 children: [
-                    { label: '0-1-0-0', value: '0-1-0-0' },
-                    { label: '0-1-0-1', value: '0-1-0-1' },
-                    { label: '0-1-0-2', value: '0-1-0-2' },
+                    { label: '0-1-0-0', value: '0100' },
+                    { label: '0-1-0-1', value: '0101' },
+                    { label: '0-1-0-2', value: '0102' },
                 ],
             }, {
                 label: '0-2',
-                value: '0-2',
+                value: '02',
             }]
         }];
         return (
@@ -190,7 +190,7 @@ export default class Tables extends Component {
                         treeData={treeData}
                         isShowSearch={true}
                         spanName={'多选Selec：'}
-                        getAllNodes={false}
+                        getAllNodes={true}
                         selectTop="36px"
                         onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
 

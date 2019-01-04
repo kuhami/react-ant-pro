@@ -184,18 +184,16 @@ export default class TreeCheck extends Component {
     let treeData = data;
     let treeList = [];
     // 递归获取树列表
-    const getTreeList = (data) => {
-        data.forEach(node => {
-            node = Object.assign(node,{'parent':node.value})
-            //console.log(node);
-            treeList.push({'value':node.parent});
-            if (node.children && node.children.length > 0) {
-                getTreeList(node.children);
-            }
-        });
+    const getTreeList = data => {
+      data.forEach(node => {
+        treeList.push({ value: node.value, label: node.label });
+        if (node.children && node.children.length > 0) {
+          getTreeList(node.children);
+        }
+      });
     };
     getTreeList(treeData);
-      return treeList;
+    return treeList;
   };
 
   onExpand = expandedKeys => {
@@ -246,21 +244,20 @@ export default class TreeCheck extends Component {
     const { treeList } = this.state;
     let uniqueExpandedKeys = [];
 
-      if (value) {
-          // 遍历树列表获取被搜索匹配到的树父id
-          treeList.map((item) => {
-              if (item.value && item.value.indexOf(value) > -1) {
-                  uniqueExpandedKeys.push(item.value);
-              }
-          });
-      }
-      else {
-          treeList.map((item) => {
-              uniqueExpandedKeys.push(item.value);
-          });
-      }
-      this.setState({
-      expandedKeys:uniqueExpandedKeys,
+    if (value) {
+      // 遍历树列表获取被搜索匹配到的树父id
+      treeList.map(item => {
+        if (item.label && item.label.indexOf(value) > -1) {
+          uniqueExpandedKeys.push(item.value);
+        }
+      });
+    } else {
+      treeList.map(item => {
+        uniqueExpandedKeys.push(item.value);
+      });
+    }
+    this.setState({
+      expandedKeys: uniqueExpandedKeys,
       searchValue: value,
       autoExpandParent: true,
     });
