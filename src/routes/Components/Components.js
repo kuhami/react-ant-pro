@@ -149,13 +149,13 @@ export default class Components extends Component {
         }, {
             key: '6',
             Param: 'divWidth',
-            explain: 'TreeCheck的宽度',
+            explain: 'TreeCheck 选择器的宽度',
             type: 'string',
             Default: '300px',
         },{
             key: '7',
             Param: 'divHeight', //参数
-            explain: 'TreeCheck的高度', //说明
+            explain: 'TreeCheck 选择器的高度', //说明
             type: 'string', //类型
             Default: '50px', //默认值
         }, {
