@@ -211,6 +211,7 @@ export default class Components extends Component {
                         getAllNodes={true}
                         //LabelAndValue={['title','key']}
                         //checkedKeys={['00','01']}
+                        multiple={true}
                         onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
 
                     <h3>API</h3>

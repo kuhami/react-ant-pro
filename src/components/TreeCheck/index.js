@@ -146,9 +146,13 @@ export default class TreeCheck extends Component {
     e.stopPropagation();
     e.preventDefault();
     let dom = ReactDOM.findDOMNode(this);
-    $(dom)
-      .find('div.ant-dropdown')
-      .removeClass('hide');
+    let {multiple} = this.props
+      if(multiple){
+          $(dom)
+              .find('div.ant-dropdown')
+              .removeClass('hide');
+      }
+
     let document = ReactDOM.findDOMNode(this).ownerDocument;
     let isScroll = $(document).find('div.frame-head-wrapper-scroll').length;
 
@@ -227,7 +231,6 @@ export default class TreeCheck extends Component {
   };
 
   onCheck = (checkedKeys, e) => {
-      console.log(checkedKeys, e);
       let len = 0,
       lenValue,
       checkedArrs = [];
@@ -260,6 +263,11 @@ export default class TreeCheck extends Component {
     const {multiple} = this.props;
 
     if(!multiple){
+        let dom = ReactDOM.findDOMNode(this);
+        $(dom)
+            .find('div.ant-dropdown')
+            .addClass('hide');
+
         this.onCheckedKeyChange(selectedKeys);
         this.setState({
             selectedKeys,
