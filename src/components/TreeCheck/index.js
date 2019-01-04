@@ -27,9 +27,10 @@ const Search = Input.Search;
 export default class TreeCheck extends Component {
   constructor(props) {
     super(props);
-    const { spanName, treeData, isShowSearch } = props;
+    let { spanName, treeData, isShowSearch } = props;
     const expandedKeys = treeData[0].children.map(n => n.value);
 
+    treeData = this.changeTreeList(treeData, props.LabelAndValue);
     let treeList = this.updateTreeList(treeData);
 
     this.state = {
@@ -177,6 +178,24 @@ export default class TreeCheck extends Component {
         }
       });
   };
+
+    /**
+     * 递归更新树列表
+     */
+    changeTreeList = (treeData,LabelAndValue) =>{
+        let getTreeList = (treeData) => {
+            return treeData.map((node) => {
+                node = Object.assign(node,{'label':node[LabelAndValue[0]]},{'value':node[LabelAndValue[1]]})
+                if(node.children && node.children.length > 0) {
+                    node = Object.assign(node,{'children':getTreeList(node.children)})
+                }
+                return node
+            })
+        }
+        //getTreeList(treeData);
+        return getTreeList(treeData);
+    }
+
   /**
    * 将树转换成一维数组
    */
@@ -256,7 +275,7 @@ export default class TreeCheck extends Component {
         uniqueExpandedKeys.push(item.value);
       });
     }
-    this.setState({
+      this.setState({
       expandedKeys: uniqueExpandedKeys,
       searchValue: value,
       autoExpandParent: true,
@@ -390,6 +409,7 @@ TreeCheck.propTypes = {
   selectTop: PropTypes.string,
   checkedKeys: PropTypes.array, // 树默认选中的值
   async: PropTypes.bool,
+  LabelAndValue: PropTypes.array, //treeData数据中不是label和value的要转化
 };
 
 // 设置默认属性
@@ -400,10 +420,11 @@ TreeCheck.defaultProps = {
   onCheckedKeyChange: function() {
     //选中节点输出
   },
-  async: false,
+  async: true,
   getAllNodes: false, //是否选取所有节点 false：只选子节点
   divWidth: '300px',
   divHeight: '50px',
   selectTop: '42px',
   checkedKeys: [],
+  LabelAndValue:['label','value']
 };

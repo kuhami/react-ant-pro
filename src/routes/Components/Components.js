@@ -1,11 +1,13 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types'
-import { Table, Tag,Card,Button,Popconfirm,Input,Skeleton } from 'antd';
+import { Table, Divider, Tag,Card,Button,Popconfirm,Input,Skeleton } from 'antd';
+import TreeCheck from 'components/TreeCheck'; // aware of the relative path
 
-export default class Tables extends Component {
+export default class Components extends Component {
     constructor(props){
-      super(props);
-      console.log(props)
+        super(props);
+        console.log(props)
+
         const {bordered} = props
         const columns = [{
             title: 'Name',
@@ -111,6 +113,11 @@ export default class Tables extends Component {
         })
         this.setState({ dataSource: dataSource });
     }
+
+    onCheckedKeyChange = (checkedArrs)=>{
+        console.log(checkedArrs);
+    }
+
     render() {
         // const [count, setCount] = useState(0)
         // console.log(count);
@@ -124,21 +131,106 @@ export default class Tables extends Component {
             }),
         };
         const {columns,dataSource} = this.state;
+
+        const treeDatas = [{
+            title: '0-0',
+            key: '0-0',
+            children: [{
+                title: '0-0-0',
+                key: '0-0-0',
+                children: [
+                    { title: '0-0-0-0', key: '0-0-0-0' },
+                    { title: '0-0-0-1', key: '0-0-0-1' },
+                    { title: '0-0-0-2', key: '0-0-0-2' },
+                ],
+            }, {
+                title: '0-0-1',
+                key: '0-0-1',
+                children: [
+                    { title: '0-0-1-0', key: '0-0-1-0' },
+                    { title: '0-0-1-1', key: '0-0-1-1' },
+                    { title: '0-0-1-2', key: '0-0-1-2' },
+                ],
+            }, {
+                title: '0-0-2',
+                key: '0-0-2',
+            }],
+        }, {
+            title: '0-1',
+            key: '0-1',
+            children: [
+                { title: '0-1-0-0', key: '0-1-0-0' },
+                { title: '0-1-0-1', key: '0-1-0-1' },
+                { title: '0-1-0-2', key: '0-1-0-2' },
+            ],
+        }, {
+            title: '0-2',
+            key: '0-2',
+        }];
+        const treeData = [{
+            label: '全部',
+            value: 'all',
+            children:[{
+                label: '0-0',
+                value: '00',
+                children: [{
+                    label: '0-0-0',
+                    value: '000',
+                    children: [
+                        { label: '0-0-0-0', value: '0000' },
+                        { label: '0-0-0-1', value: '0001' },
+                        { label: '0-0-0-2', value: '0002' },
+                    ],
+                }, {
+                    label: '0-0-1',
+                    value: '001',
+                    children: [
+                        { label: '0-0-1-0', value: '0010' },
+                        { label: '0-0-1-1', value: '0011' },
+                        { label: '0-0-1-2', value: '0012' },
+                    ],
+                }, {
+                    label: '0-0-2',
+                    value: '002',
+                }],
+            }, {
+                label: '0-1',
+                value: '01',
+                children: [
+                    { label: '0-1-0-0', value: '0100' },
+                    { label: '0-1-0-1', value: '0101' },
+                    { label: '0-1-0-2', value: '0102' },
+                ],
+            }, {
+                label: '0-2',
+                value: '02',
+            }]
+        }];
         return (
             <div>
                 <Card title="多功能Table"  bordered={false}>
-                    <Skeleton loading={false} title = {'我是title'} active={true} avatar={true} paragraph={{ rows: 4 }}>
-                            <Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>
-                                增加
-                            </Button>
-                            <Table rowSelection={rowSelection}
-                                   size="small"
-                                   columns={columns}
-                                   dataSource={dataSource}
-                                   loading={false}
-                                   bordered={this.state.bordered}
-                            />
-                    </Skeleton>
+                    {/*<Skeleton loading={false} title = {'我是title'} active={true} avatar={true} paragraph={{ rows: 4 }}>*/}
+                        {/*<Button onClick={this.handleAdd} type="primary" style={{ marginBottom: 16 }}>*/}
+                            {/*增加*/}
+                        {/*</Button>*/}
+                        {/*<Table rowSelection={rowSelection}*/}
+                               {/*size="small"*/}
+                               {/*columns={columns}*/}
+                               {/*dataSource={dataSource}*/}
+                               {/*loading={false}*/}
+                               {/*bordered={this.state.bordered}*/}
+                        {/*/>*/}
+                    {/*</Skeleton>*/}
+
+                    <TreeCheck
+                        treeData={treeData}
+                        isShowSearch={true}
+                        spanName={'多选Selec：'}
+                        getAllNodes={true}
+                        //LabelAndValue={['title','key']}
+                        selectTop="36px"
+                        onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
+
                 </Card>
             </div>
         );
@@ -146,7 +238,7 @@ export default class Tables extends Component {
 }
 
 // 组件必须传递参数
-Tables.propTypes = {
+Components.propTypes = {
     bordered:PropTypes.bool,
     // isShowSearch: PropTypes.bool,
     // spanName: PropTypes.string,
@@ -159,6 +251,6 @@ Tables.propTypes = {
 };
 
 // 设置默认属性
-Tables.defaultProps = {
+Components.defaultProps = {
     bordered:true,//是否展示外边框和列边框
 };

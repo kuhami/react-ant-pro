@@ -168,6 +168,10 @@ const menuData = [
         path: 'Table',
       },
       {
+          name: '组件封装',
+          path: 'Components',
+      },
+      {
         name: 'React Hooks',
         path: 'Hooks',
       },
