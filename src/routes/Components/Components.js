@@ -226,14 +226,6 @@ export default class Components extends Component {
 // 组件必须传递参数
 Components.propTypes = {
     bordered:PropTypes.bool,
-    // isShowSearch: PropTypes.bool,
-    // spanName: PropTypes.string,
-    // getAllNodes: PropTypes.bool,
-    // divWidth: PropTypes.string,
-    // divHeight: PropTypes.string,
-    // selectTop: PropTypes.string,
-    // checkedKeys: PropTypes.array, // 树默认选中的值
-    // async: PropTypes.bool
 };
 
 // 设置默认属性
