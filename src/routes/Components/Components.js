@@ -136,6 +136,7 @@ export default class Components extends Component {
     }
 
     onEdit = (targetKey, action) => {
+        console.log(this,targetKey, action,this[action](targetKey));
         this[action](targetKey);
     }
 
@@ -180,8 +181,9 @@ export default class Components extends Component {
                 value: '02',
             }]
         }];
+        console.log(this.newTabIndex);
         const activeKey = `newTab${this.newTabIndex++}`;
-        panes.push({ title: 'New Tab', content: (<Card title="多选SelectTree"  bordered={false}>
+        panes.push({ title: 'New Tab ' + this.newTabIndex , content: (<Card title="多选SelectTree"  bordered={false}>
             <TreeCheck
                 treeData={treeData}
                 isShowSearch={true}
@@ -307,7 +309,7 @@ export default class Components extends Component {
                     activeKey={this.state.activeKey}
                     type="editable-card"
                     onEdit={this.onEdit}
-                    tabBarGutter={0}
+                    tabBarGutter={-2}
                 >
                     {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
                 </Tabs>
