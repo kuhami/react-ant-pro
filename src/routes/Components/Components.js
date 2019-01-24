@@ -314,21 +314,21 @@ export default class Components extends Component {
                     {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
                 </Tabs>
 
-                {/*<Card title="多选SelectTree"  bordered={false}>*/}
-                    {/*<TreeCheck*/}
-                        {/*treeData={treeData}*/}
-                        {/*isShowSearch={true}*/}
-                        {/*spanName={'多选Select：'}*/}
-                        {/*getAllNodes={true}*/}
-                        {/*//LabelAndValue={['title','key']}*/}
-                        {/*//checkedKeys={['00','01']}*/}
-                        {/*multiple={true}*/}
-                        {/*onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>*/}
+                <Card title="多选SelectTree"  bordered={false}>
+                    <TreeCheck
+                        treeData={treeData}
+                        isShowSearch={true}
+                        spanName={'多选Select：'}
+                        getAllNodes={true}
+                        //LabelAndValue={['title','key']}
+                        //checkedKeys={['00','01']}
+                        multiple={true}
+                        onCheckedKeyChange={(checkedArrs) => this.onCheckedKeyChange(checkedArrs)}/>
 
-                    {/*<h3>API</h3>*/}
-                    {/*<p>TreeCheck 为多选SelectTree，本组件为适应特殊场景而封装。</p>*/}
-                    {/*<Table columns={this.state.columns} dataSource={this.state.dataSource} pagination={false} />*/}
-                {/*</Card>*/}
+                    <h3>API</h3>
+                    <p>TreeCheck 为多选SelectTree，本组件为适应特殊场景而封装。</p>
+                    <Table columns={this.state.columns} dataSource={this.state.dataSource} pagination={false} />
+                </Card>
             </div>
         );
     }
