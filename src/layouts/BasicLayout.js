@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Icon, message } from 'antd';
+import { Layout, Icon, message,Tabs } from 'antd';
 import DocumentTitle from 'react-document-title';
 import { connect } from 'dva';
 import { Route, Redirect, Switch, routerRedux } from 'dva/router';
@@ -19,6 +19,7 @@ import logo from '../assets/logo.svg';
 const { Content, Header, Footer } = Layout;
 const { AuthorizedRoute, check } = Authorized;
 
+const { TabPane } = Tabs;
 /**
  * 根据菜单取得重定向地址.
  */
@@ -84,12 +85,17 @@ enquireScreen(b => {
 });
 
 class BasicLayout extends React.PureComponent {
+
   static childContextTypes = {
     location: PropTypes.object,
     breadcrumbNameMap: PropTypes.object,
   };
   state = {
     isMobile,
+    tabList:[],
+    tabListKey:[],
+    activeKey:'/dashboard/workplace',
+    activeRemove:false
   };
   getChildContext() {
     const { location, routerData } = this.props;
@@ -121,8 +127,7 @@ class BasicLayout extends React.PureComponent {
     // According to the url parameter to redirect
     // 这里是重定向的,重定向到 url 的 redirect 参数所示地址
     const urlParams = new URL(window.location.href);
-
-    const redirect = urlParams.searchParams.get('redirect');
+      const redirect = urlParams.searchParams.get('redirect');
     // Remove the parameters in the url
     if (redirect) {
       urlParams.searchParams.delete('redirect');
@@ -151,7 +156,7 @@ class BasicLayout extends React.PureComponent {
     });
   };
   handleMenuClick = ({ key }) => {
-    if (key === 'triggerError') {
+      if (key === 'triggerError') {
       this.props.dispatch(routerRedux.push('/exception/trigger'));
       return;
     }
@@ -168,6 +173,63 @@ class BasicLayout extends React.PureComponent {
       });
     }
   };
+
+    onPrevClick = (e)=>{
+        console.log(e)
+    }
+
+    // 切换 tab页 router.push(key);
+    onChange = key => {
+        this.setState({ activeKey:key });
+        this.props.history.push({ pathname : key  })
+    };
+
+    onEdit = (targetKey, action) => {
+        this[action](targetKey);
+    }
+
+    remove = (targetKey) => {
+        let {activeKey,activeRemove} = this.state;
+        let lastIndex;
+        this.state.tabList.forEach((pane, i) => {
+            if (pane.key === targetKey) {
+                lastIndex = i - 1;
+            }
+        });
+        const tabList = []
+        this.state.tabList.map(pane => {
+            if(pane.key !== targetKey){
+                tabList.push(pane)
+            }
+        });
+        if (lastIndex >= 0 && activeKey === targetKey) {
+            activeKey = tabList[lastIndex].key;
+            activeRemove = true
+        }else{
+            activeRemove = false
+        }
+        this.props.history.push({ pathname : activeKey  })
+        this.setState({ tabList, activeKey,activeRemove });
+    }
+
+    updateTreeList = data => {
+        const treeData = data;
+        const treeList = [];
+        // 递归获取树列表
+        const getTreeList = data => {
+            data.forEach(node => {
+                if(!node.level){
+                    treeList.push({ tab: node.name, key: node.path,locale:node.locale,closable:true,content:'' });
+                }
+                if (!node.hideChildrenInMenu && node.children && node.children.length > 0) {
+                    getTreeList(node.children);
+                }
+            });
+        };
+        getTreeList(treeData);
+        return treeList;
+    };
+
   render() {
     const {
       currentUser,
@@ -178,8 +240,32 @@ class BasicLayout extends React.PureComponent {
       match,
       location,
     } = this.props;
-    const bashRedirect = this.getBashRedirect();
-    const layout = (
+      console.log(this, location);
+      const tabLists = getRoutes(match.path, routerData);
+      const {tabListKey,tabList,activeRemove} =  this.state
+      this.setState({ activeKey:location.pathname });
+      tabLists.map((v) => {
+          if(v.key == location.pathname && !activeRemove){
+              if(tabList.length == 0){
+                  v.closable = false
+                  this.state.tabList.push(v)
+              }else{
+                  if(!tabListKey.includes(v.key)){
+                      this.state.tabList.push(v)
+                  }
+              }
+          }
+      })
+      if(location.pathname == '/'){
+          // router.push('/home/home')
+          this.props.history.push({ pathname : '/study/test'  })
+      }
+      this.setState({ activeRemove:false });
+      this.state.tabListKey = tabList.map((va)=>va.key)
+      const bashRedirect = this.getBashRedirect();
+
+      console.log(this.state.tabList);
+      const layout = (
       <Layout>
         <SiderMenu
           logo={logo}
@@ -209,23 +295,45 @@ class BasicLayout extends React.PureComponent {
             />
           </Header>
           <Content style={{ margin: '24px 24px 0', height: '100%' }}>
-            <Switch>
-              {redirectData.map(item => (
-                <Redirect key={item.from} exact from={item.from} to={item.to} />
-              ))}
-              {getRoutes(match.path, routerData).map(item => (
-                <AuthorizedRoute
-                  key={item.key}
-                  path={item.path}
-                  component={item.component}
-                  exact={item.exact}
-                  authority={item.authority}
-                  redirectPath="/exception/403"
-                />
-              ))}
-              <Redirect exact from="/" to={bashRedirect} />
-              <Route render={NotFound} />
-            </Switch>
+            {/*<Switch>*/}
+              {/*{redirectData.map(item => (*/}
+                {/*<Redirect key={item.from} exact from={item.from} to={item.to} />*/}
+              {/*))}*/}
+              {/*{getRoutes(match.path, routerData).map(item => (*/}
+                {/*<AuthorizedRoute*/}
+                  {/*key={item.key}*/}
+                  {/*path={item.path}*/}
+                  {/*component={item.component}*/}
+                  {/*exact={item.exact}*/}
+                  {/*authority={item.authority}*/}
+                  {/*redirectPath="/exception/403"*/}
+                {/*/>*/}
+               {/*))}*/}
+
+                 <Tabs
+                     // className={styles.tabs}
+                     activeKey={this.state.activeKey}
+                     onChange={this.onChange}
+                     onPrevClick = {this.onPrevClick}
+                     // tabBarExtraContent={}
+                     tabBarStyle={{background:'#fff'}}
+                     tabPosition="top"
+                     tabBarGutter={-1}
+                     hideAdd
+                     type="editable-card"
+                     onEdit={this.onEdit}
+                     >
+                     {tabList.map(item => (
+                       <TabPane tab={item.name} key={item.key} closable={item.closable}>
+
+                           {item.content ? item.content:'未设置路由'}
+
+                       </TabPane>
+                     ))}
+                 </Tabs>
+              {/*<Redirect exact from="/" to={bashRedirect} />*/}
+              {/*<Route render={NotFound} />*/}
+            {/*</Switch>*/}
           </Content>
           <Footer style={{ padding: 0 }}>
             <GlobalFooter

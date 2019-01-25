@@ -2,7 +2,10 @@ import { createElement } from 'react';
 import dynamic from 'dva/dynamic';
 import pathToRegexp from 'path-to-regexp';
 import { getMenuData } from './menu';
-
+import Analysis from '../routes/Dashboard/Analysis';
+import NotFound403 from '../routes/Exception/403';
+import NotFound404 from '../routes/Exception/404';
+import NotFound500 from '../routes/Exception/500';
 let routerDataCache;
 
 const modelNotExisted = (app, model) =>
@@ -74,6 +77,7 @@ export const getRouterData = app => {
     },
     '/dashboard/analysis': {
       component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
+      content: <Analysis />,
     },
     '/dashboard/monitor': {
       component: dynamicWrapper(app, ['monitor'], () => import('../routes/Dashboard/Monitor')),
@@ -144,12 +148,15 @@ export const getRouterData = app => {
     },
     '/exception/403': {
       component: dynamicWrapper(app, [], () => import('../routes/Exception/403')),
+      content: <NotFound403 />,
     },
     '/exception/404': {
       component: dynamicWrapper(app, [], () => import('../routes/Exception/404')),
+      content: <NotFound404 />,
     },
     '/exception/500': {
       component: dynamicWrapper(app, [], () => import('../routes/Exception/500')),
+      content: <NotFound500 />,
     },
     '/exception/trigger': {
       component: dynamicWrapper(app, ['error'], () =>
@@ -177,9 +184,9 @@ export const getRouterData = app => {
     '/study/Table': {
       component: dynamicWrapper(app, [], () => import('../routes/Table/Table')),
     },
-      '/study/Components': {
-          component: dynamicWrapper(app, [], () => import('../routes/Components/Components')),
-      },
+    '/study/Components': {
+      component: dynamicWrapper(app, [], () => import('../routes/Components/Components')),
+    },
     '/study/Hooks': {
       component: dynamicWrapper(app, [], () => import('../routes/Hooks/Hooks')),
     },
