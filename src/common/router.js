@@ -3,6 +3,8 @@ import dynamic from 'dva/dynamic';
 import pathToRegexp from 'path-to-regexp';
 import { getMenuData } from './menu';
 import Analysis from '../routes/Dashboard/Analysis';
+import Monitor from '../routes/Dashboard/Monitor';
+import Workplace from '../routes/Dashboard/Workplace';
 import NotFound403 from '../routes/Exception/403';
 import NotFound404 from '../routes/Exception/404';
 import NotFound500 from '../routes/Exception/500';
@@ -81,11 +83,13 @@ export const getRouterData = app => {
     },
     '/dashboard/monitor': {
       component: dynamicWrapper(app, ['monitor'], () => import('../routes/Dashboard/Monitor')),
+      content:<Monitor/>,
     },
     '/dashboard/workplace': {
       component: dynamicWrapper(app, ['project', 'activities', 'chart'], () =>
         import('../routes/Dashboard/Workplace')
       ),
+      content:<Workplace/>,
       // hideInBreadcrumb: true,
       // name: '工作台',
       // authority: 'admin',

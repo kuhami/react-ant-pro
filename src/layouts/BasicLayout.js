@@ -294,7 +294,7 @@ class BasicLayout extends React.PureComponent {
               onNoticeVisibleChange={this.handleNoticeVisibleChange}
             />
           </Header>
-          <Content style={{ margin: '24px 24px 0', height: '100%' }}>
+          <Content style={{ margin: '2px 24px 0', height: '100%' }}>
             {/*<Switch>*/}
               {/*{redirectData.map(item => (*/}
                 {/*<Redirect key={item.from} exact from={item.from} to={item.to} />*/}
@@ -325,9 +325,7 @@ class BasicLayout extends React.PureComponent {
                      >
                      {tabList.map(item => (
                        <TabPane tab={item.name} key={item.key} closable={item.closable}>
-
-                           {item.content ? item.content:'未设置路由'}
-
+                           {item.content ? item.content:<NotFound/>}
                        </TabPane>
                      ))}
                  </Tabs>
