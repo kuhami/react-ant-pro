@@ -139,7 +139,8 @@ export function getRoutes(path, routerData) {
   // Replace path to '' eg. path='user' /user/name => name
   routes = routes.map(item => item.replace(path, ''));
   // Get the route to be rendered to remove the deep rendering
-  const renderArr = getRenderArr(routes);
+   // const renderArr = getRenderArr(routes);  //lyl：2019-01-25 修改
+    const renderArr = routes;
   // Conversion and stitching parameters
   const renderRoutes = renderArr.map(item => {
     const exact = !routes.some(route => route !== item && getRelation(route, item) === 1);

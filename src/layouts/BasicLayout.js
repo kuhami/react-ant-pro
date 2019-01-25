@@ -10,6 +10,7 @@ import { enquireScreen } from 'enquire-js';
 import GlobalHeader from '../components/GlobalHeader';
 import GlobalFooter from '../components/GlobalFooter';
 import SiderMenu from '../components/SiderMenu';
+import Home from '../routes/Home/Home';
 import NotFound from '../routes/Exception/404';
 import { getRoutes } from '../utils/utils';
 import Authorized from '../utils/Authorized';
@@ -92,9 +93,15 @@ class BasicLayout extends React.PureComponent {
   };
   state = {
     isMobile,
-    tabList:[],
-    tabListKey:[],
-    activeKey:'/dashboard/workplace',
+    tabList:[{closable: false,
+        content: <Home/>,
+        exact: true,
+        key: "/home",
+        name: "Home",
+        path: "/home"
+    }],
+    tabListKey:['/home'],
+    activeKey:'/home',
     activeRemove:false
   };
   getChildContext() {
@@ -212,24 +219,6 @@ class BasicLayout extends React.PureComponent {
         this.setState({ tabList, activeKey,activeRemove });
     }
 
-    updateTreeList = data => {
-        const treeData = data;
-        const treeList = [];
-        // 递归获取树列表
-        const getTreeList = data => {
-            data.forEach(node => {
-                if(!node.level){
-                    treeList.push({ tab: node.name, key: node.path,locale:node.locale,closable:true,content:'' });
-                }
-                if (!node.hideChildrenInMenu && node.children && node.children.length > 0) {
-                    getTreeList(node.children);
-                }
-            });
-        };
-        getTreeList(treeData);
-        return treeList;
-    };
-
   render() {
     const {
       currentUser,
@@ -258,13 +247,11 @@ class BasicLayout extends React.PureComponent {
       })
       if(location.pathname == '/'){
           // router.push('/home/home')
-          this.props.history.push({ pathname : '/study/test'  })
+          this.props.history.push({ pathname : '/home'  })
       }
       this.setState({ activeRemove:false });
       this.state.tabListKey = tabList.map((va)=>va.key)
       const bashRedirect = this.getBashRedirect();
-
-      console.log(this.state.tabList);
       const layout = (
       <Layout>
         <SiderMenu

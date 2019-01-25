@@ -2,6 +2,12 @@ import { isUrl } from '../utils/utils';
 
 const menuData = [
   {
+      name: 'Home',
+      icon: 'dashboard',
+      path: 'home',
+      hideInMenu: true,
+  },
+  {
     name: 'dashboard',
     icon: 'dashboard',
     path: 'dashboard',
