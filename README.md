@@ -1,23 +1,14 @@
-# Ant Design Pro
+<h1 align="center">供应链报表系统</h1>
 
-[![](https://img.shields.io/travis/ant-design/ant-design-pro.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-pro) [![Build status](https://ci.appveyor.com/api/projects/status/67fxu2by3ibvqtat/branch/master?svg=true)](https://ci.appveyor.com/project/afc163/ant-design-pro/branch/master)  [![Gitter](https://badges.gitter.im/ant-design/ant-design-pro.svg)](https://gitter.im/ant-design/ant-design-pro?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-开箱即用的中台前端/设计解决方案。
-
-![](https://gw.alipayobjects.com/zos/rmsportal/xEdBqwSzvoSapmnSnYjU.png)
-
-- 预览：http://preview.pro.ant.design
-- 首页：http://pro.ant.design/index-cn
-- 使用文档：http://pro.ant.design/docs/getting-started-cn
-- 更新日志: http://pro.ant.design/docs/changelog-cn
-- 常见问题：http://pro.ant.design/docs/faq-cn
-- 国内镜像：http://ant-design-pro.gitee.io
+<div align="center">
+<img src="http://gitlab.mwbyd.cn:10080/InnovationCenter/InnP_SupplyFront/raw/master/src/style/img/ant.jpeg"/>
+</div>
 
 ## 特性
 
 - :gem: **优雅美观**：基于 Ant Design 体系精心设计
 - :triangular_ruler: **常见设计模式**：提炼自中后台应用的典型页面和场景
-- :rocket: **最新技术栈**：使用 React/dva/antd 等前端前沿技术开发
+- :rocket: **最新技术栈**：使用 React/umi/dva/antd 等前端前沿技术开发
 - :iphone: **响应式**：针对不同屏幕大小设计
 - :art: **主题**：可配置的主题满足多样化的品牌诉求
 - :globe_with_meridians: **国际化**：内建业界通用的国际化方案
@@ -44,6 +35,9 @@
 - 详情页
   - 基础详情页
   - 高级详情页
+- 用户
+  - 用户中心页
+  - 用户设置页
 - 结果
   - 成功页
   - 失败页
@@ -59,31 +53,27 @@
 
 ## 使用
 
+### 使用命令行
 ```bash
-$ git clone https://github.com/ant-design/ant-design-pro.git --depth=1
-$ cd ant-design-pro
+$ git clone ssh://git@gitlab.mwbyd.cn:10022/InnovationCenter/InnP_SupplyFront.git
+$ cd InnP_SupplyFront
 $ npm install
 $ npm start         # 访问 http://localhost:8000
 ```
 
-也可以使用集成化的 [ant-design-pro-cli](https://github.com/ant-design/ant-design-pro-cli) 工具。
+更多信息请参考 [使用文档](http://gitlab.mwbyd.cn:10080/InnovationCenter/InnP_SupplyFront)。
 
-```bash
-$ npm install ant-design-pro-cli -g
-$ mkdir pro-demo && cd pro-demo
-$ pro new
-```
-
-更多信息请参考 [使用文档](http://pro.ant.design/docs/getting-started)。
-
-## 兼容性
+## 支持环境
 
 现代浏览器及 IE11。
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
+| --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
 ## 参与贡献
 
 我们非常欢迎你的贡献，你可以通过以下方式和我们一起共建 :smiley:：
 
 - 在你的公司或个人项目中使用 Ant Design Pro。
-- 通过 [Issue](http://github.com/ant-design/ant-design-pro/issues) 报告 bug 或进行咨询。
-- 提交 [Pull Request](http://github.com/ant-design/ant-design-pro/pulls) 改进 Pro 的代码。
+- 提交 [Pull Request](http://gitlab.mwbyd.cn:10080/InnovationCenter/InnP_SupplyFront) 改进 Pro 的代码。
