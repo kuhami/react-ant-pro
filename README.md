@@ -1,4 +1,4 @@
-<h1 align="center">Ant Design Pro</h1>
+<h1 align="center">React Ant Pro</h1>
 
 <div align="center">
 <img src="http://gitlab.mwbyd.cn:10080/InnovationCenter/InnP_SupplyFront/raw/master/src/style/img/ant.jpeg"/>
