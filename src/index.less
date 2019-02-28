@@ -34,4 +34,87 @@ body {
   //.ant-tabs-bar{
   //  margin-bottom: 0px !important;
   //}
+  /******head 样式 开始******/
+  .ant-layout-header{
+    height: 46px !important;
+    line-height: 46px !important;
+    .index__header___1L3tU{
+      height: 46px;
+      i.index__trigger___3Dsd1{
+        line-height: 46px;
+        font-size: 18px;
+      }
+    }
+  }
+  /******head 样式 开始******/
+
+  /******多标签tabs样式 开始******/
+  .globalTabs{
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-nav-container{
+      font-size: 12px;
+      height: 32px !important;
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
+      border-radius: 0px;
+      border-top: 0px;
+      line-height: 30px;
+      .anticon-close{
+        display: none;
+      }
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active{
+      padding-bottom: 0px;
+      .anticon-close{
+        display: inline-block;
+      }
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab:hover{
+      padding-left: 20px;
+      padding-right: 20px;
+      .anticon-close{
+        color: #333 !important;
+        display: inline-block;
+      }
+    }
+  }
+  /******多标签tabs样式  结束******/
+
+  /******Table表格  开始******/
+  .ant-table-small > .ant-table-content > .ant-table-body{
+    margin: 0px !important;
+    .ant-table-thead{
+      background: #fafafa;
+    }
+  }
+  //分页样式
+  .defaultSmall{
+    .ant-pagination-item{
+      margin-right: 8px !important;
+      border: 1px solid #d9d9d9 !important;
+      a{
+        text-decoration: none;
+        color: rgba(0,0,0,.65);
+        transition: none;
+        margin: 0 6px;
+      }
+    }
+    .ant-pagination-prev, .ant-pagination-next{
+      border: 1px solid #d9d9d9 ;
+      margin-right: 8px !important;
+    }
+    .ant-pagination-item-active{
+      background-color: #a4bfd5;
+      border-color: #a4bfd5 !important;
+      a{
+        color:#fff !important;
+      }
+    }
+    .ant-pagination-item-active:hover{
+      a{
+        color: #fff !important;
+      }
+    }
+  }
+  /******Table表格  结束******/
+
 }
