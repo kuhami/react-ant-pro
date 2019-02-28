@@ -3,12 +3,34 @@ import dynamic from 'dva/dynamic';
 import pathToRegexp from 'path-to-regexp';
 import { getMenuData } from './menu';
 import Home from '../routes/Home/Home';
+//dashboard
 import Analysis from '../routes/Dashboard/Analysis';
 import Monitor from '../routes/Dashboard/Monitor';
 import Workplace from '../routes/Dashboard/Workplace';
+// 列表页
+import TableList from '../routes/List/TableList';
+import BasicList from '../routes/List/BasicList';
+import CardList from '../routes/List/CardList';
+import Articles from '../routes/List/Articles';
+import Applications from '../routes/List/Applications';
+import Projects from '../routes/List/Projects';
+// 详情页
+import BasicProfile from '../routes/Profile/BasicProfile';
+import AdvancedProfile from '../routes/Profile/AdvancedProfile';
+//结果页
+import Success from '../routes/Result/Success';
+import Error from '../routes/Result/Error';
+// 异常页
 import NotFound403 from '../routes/Exception/403';
 import NotFound404 from '../routes/Exception/404';
 import NotFound500 from '../routes/Exception/500';
+import Trigger from '../routes/Exception/triggerException';
+// 学习
+import Test from '../routes/Test/Test';
+import Components from '../routes/Components/Components';
+import Table from '../routes/Table/Table';
+import Hooks from '../routes/Hooks/Hooks';
+
 let routerDataCache;
 
 const modelNotExisted = (app, model) =>
@@ -122,38 +144,50 @@ export const getRouterData = app => {
     },
     '/list/table-list': {
       component: dynamicWrapper(app, ['rule'], () => import('../routes/List/TableList')),
+        content:<TableList/>,
     },
     '/list/basic-list': {
       component: dynamicWrapper(app, ['list'], () => import('../routes/List/BasicList')),
+        content:<BasicList/>,
     },
     '/list/card-list': {
       component: dynamicWrapper(app, ['list'], () => import('../routes/List/CardList')),
+        content:<CardList/>,
     },
     '/list/search': {
       component: dynamicWrapper(app, ['list'], () => import('../routes/List/List')),
+
     },
     '/list/search/projects': {
       component: dynamicWrapper(app, ['list'], () => import('../routes/List/Projects')),
+        content:<Projects/>,
+
     },
     '/list/search/applications': {
       component: dynamicWrapper(app, ['list'], () => import('../routes/List/Applications')),
+        content:<Applications/>,
     },
     '/list/search/articles': {
       component: dynamicWrapper(app, ['list'], () => import('../routes/List/Articles')),
+        content:<Articles/>,
     },
     '/profile/basic': {
       component: dynamicWrapper(app, ['profile'], () => import('../routes/Profile/BasicProfile')),
+        content:<BasicProfile/>,
     },
     '/profile/advanced': {
       component: dynamicWrapper(app, ['profile'], () =>
         import('../routes/Profile/AdvancedProfile')
       ),
+        content:<AdvancedProfile/>,
     },
     '/result/success': {
       component: dynamicWrapper(app, [], () => import('../routes/Result/Success')),
+        content:<Success/>,
     },
     '/result/fail': {
       component: dynamicWrapper(app, [], () => import('../routes/Result/Error')),
+        content:<Error/>,
     },
     '/exception/403': {
       component: dynamicWrapper(app, [], () => import('../routes/Exception/403')),
@@ -171,6 +205,7 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, ['error'], () =>
         import('../routes/Exception/triggerException')
       ),
+        content: <Trigger />,
     },
     '/user': {
       component: dynamicWrapper(app, [], () => import('../layouts/UserLayout')),
@@ -189,15 +224,19 @@ export const getRouterData = app => {
     // },
     '/study/test': {
       component: dynamicWrapper(app, [], () => import('../routes/Test/Test')),
+        content: <Test />,
     },
     '/study/Table': {
       component: dynamicWrapper(app, [], () => import('../routes/Table/Table')),
+        content: <Table />,
     },
     '/study/Components': {
       component: dynamicWrapper(app, [], () => import('../routes/Components/Components')),
+        content: <Components />,
     },
     '/study/Hooks': {
       component: dynamicWrapper(app, [], () => import('../routes/Hooks/Hooks')),
+        content: <Hooks/>,
     },
   };
   // Get name from ./menu.js or just set it in the router data.
