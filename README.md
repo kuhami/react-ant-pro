@@ -1,7 +1,7 @@
 <h1 align="center">React Ant Pro</h1>
 
 <div align="center">
-<img src="http://gitlab.mwbyd.cn:10080/InnovationCenter/InnP_SupplyFront/raw/master/src/style/img/ant.jpeg"/>
+<img src="https://raw.githubusercontent.com/kuhami/react-ant-pro/master/public/image/ant.jpeg"/>
 </div>
 
 ## 特性
