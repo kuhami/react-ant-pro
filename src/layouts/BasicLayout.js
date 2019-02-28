@@ -229,13 +229,14 @@ class BasicLayout extends React.PureComponent {
       match,
       location,
     } = this.props;
-      console.log(this, location);
+      // console.log(this, location);
       const tabLists = getRoutes(match.path, routerData);
       const {tabListKey,tabList,activeRemove} =  this.state
-      this.setState({ activeKey:location.pathname });
+      // this.setState({ activeKey:location.pathname });
+      this.state.activeKey = location.pathname;
       tabLists.map((v) => {
-          if(v.key == location.pathname && !activeRemove){
-              if(tabList.length == 0){
+          if(v.key === location.pathname && !activeRemove){
+              if(tabList.length === 0){
                   v.closable = false
                   this.state.tabList.push(v)
               }else{
@@ -245,11 +246,12 @@ class BasicLayout extends React.PureComponent {
               }
           }
       })
-      if(location.pathname == '/'){
+      if(location.pathname === '/'){
           // router.push('/home/home')
           this.props.history.push({ pathname : '/home'  })
       }
-      this.setState({ activeRemove:false });
+      // this.setState({ activeRemove:false });
+      this.state.activeRemove = false
       this.state.tabListKey = tabList.map((va)=>va.key)
       const bashRedirect = this.getBashRedirect();
       const layout = (
