@@ -55,8 +55,8 @@
 
 ### 使用命令行
 ```bash
-$ git clone ssh://git@gitlab.mwbyd.cn:10022/InnovationCenter/InnP_SupplyFront.git
-$ cd InnP_SupplyFront
+$ git clone https://github.com/kuhami/react-ant-pro.git
+$ cd react-ant-pro
 $ npm install
 $ npm start         # 访问 http://localhost:8000
 ```
