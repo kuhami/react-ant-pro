@@ -2,6 +2,7 @@
   "name": "ant-design-pro",
   "version": "1.2.1",
   "description": "An out-of-box UI solution for enterprise applications",
+  "homepage": "https://kuhami.github.io/ant-design-tabs",
   "private": true,
   "scripts": {
     "precommit": "npm run lint-staged",
@@ -18,7 +19,9 @@
     "test": "roadhog test",
     "test:component": "roadhog test ./src/components",
     "test:all": "node ./tests/run-tests.js",
-    "prettier": "prettier --write ./src/**/**/**/*"
+    "prettier": "prettier --write ./src/**/**/**/*",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@antv/data-set": "^0.8.0",
