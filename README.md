@@ -4,7 +4,7 @@
 <img src="https://raw.githubusercontent.com/kuhami/react-ant-pro/master/public/image/ant.jpeg"/>
 </div>
 
-## 特性
+## 特性gh-pages
 
 - :gem: **优雅美观**：基于 Ant Design 体系精心设计
 - :triangular_ruler: **常见设计模式**：提炼自中后台应用的典型页面和场景
