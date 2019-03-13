@@ -1,4 +1,4 @@
-<h1 align="center">React Ant Pro（多标签tabs）</h1>
+<h1 align="center">ant-design-tabs（支持多标签tabs）</h1>
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/kuhami/react-ant-pro/master/public/image/ant.jpeg"/>
