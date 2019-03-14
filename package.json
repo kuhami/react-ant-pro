@@ -2,7 +2,7 @@
   "name": "ant-design-pro",
   "version": "1.2.1",
   "description": "An out-of-box UI solution for enterprise applications",
-  "homepage": "https://kuhami.github.io/react-ant-pro",
+  "homepage": "https://github.com/kuhami/react-ant-pro",
   "private": true,
   "scripts": {
     "precommit": "npm run lint-staged",
