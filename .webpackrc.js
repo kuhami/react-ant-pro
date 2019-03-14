@@ -20,6 +20,6 @@ export default {
     template: './src/index.ejs',
   },
   disableDynamicImport: true,
-  publicPath: '/',
+  publicPath: '',
   hash: true,
 };
