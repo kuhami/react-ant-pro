@@ -31,7 +31,7 @@ export default class LoginPage extends Component {
     if(type === 'account'){
       if((userName === 'admin' && password === '888888') || (userName === 'user' && password === '123456')){
         localStorage.setItem('antd-pro-authority', userName)
-        window.location.href='/home';
+        window.location.href='/KroInterview/antTabs';
       }else{
         this.setState({
           login:{
@@ -43,7 +43,7 @@ export default class LoginPage extends Component {
       }
     }else{
       localStorage.setItem('antd-pro-authority', 'admin')
-      window.location.href='/home';
+      window.location.href='/KroInterview/antTabs';
     }
 
     // if (!err) {
