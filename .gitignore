@@ -22,3 +22,5 @@ yarn.lock
 package-lock.json
 *bak
 jsconfig.json
+
+_config.yml
