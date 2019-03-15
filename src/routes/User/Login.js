@@ -27,11 +27,10 @@ export default class LoginPage extends Component {
 
   handleSubmit = (err, values) => {
     const { type } = this.state,{userName,password}=values;
-    console.log(values,type);
     if(type === 'account'){
       if((userName === 'admin' && password === '888888') || (userName === 'user' && password === '123456')){
         localStorage.setItem('antd-pro-authority', userName)
-        window.location.href='/KroInterview/antTabs';
+        window.location.href='/react-ant-pro';
       }else{
         this.setState({
           login:{
@@ -43,7 +42,7 @@ export default class LoginPage extends Component {
       }
     }else{
       localStorage.setItem('antd-pro-authority', 'admin')
-      window.location.href='/KroInterview/antTabs';
+      window.location.href='/react-ant-pro';
     }
 
     // if (!err) {
