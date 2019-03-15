@@ -24,3 +24,6 @@ package-lock.json
 jsconfig.json
 
 _config.yml
+/css
+/image
+index.html
