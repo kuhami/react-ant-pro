@@ -22,4 +22,11 @@ export default {
   disableDynamicImport: true,
   publicPath: '',
   hash: true,
+  // proxy: {
+  //   '/api': {
+  //     target: "https://kuhami.github.io/",
+  //     changeOrigin: true,
+  //     pathRewrite: { "^/" : "" }
+  //   }
+  // }
 };
