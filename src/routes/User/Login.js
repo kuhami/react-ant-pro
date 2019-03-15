@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Link } from 'dva/router';
+import {Link, routerRedux} from 'dva/router';
 import { Checkbox, Alert, Icon } from 'antd';
 import Login from 'components/Login';
 import styles from './Login.less';
@@ -15,29 +15,46 @@ export default class LoginPage extends Component {
   state = {
     type: 'account',
     autoLogin: true,
+    login:{
+      status:'',
+      type:'',
+      submitting:false
+    }
   };
   onTabChange = type => {
     this.setState({ type });
   };
 
   handleSubmit = (err, values) => {
-    const { type } = this.state;
-    console.log({
-        type: 'login/login',
-        payload: {
-            ...values,
-            type,
-        },
-    })
-    if (!err) {
-      this.props.dispatch({
-        type: 'login/login',
-        payload: {
-          ...values,
-          type,
-        },
-      });
+    const { type } = this.state,{userName,password}=values;
+    console.log(values,type);
+    if(type === 'account'){
+      if((userName === 'admin' && password === '888888') || (userName === 'user' && password === '123456')){
+        localStorage.setItem('antd-pro-authority', userName)
+        window.location.href='/home';
+      }else{
+        this.setState({
+          login:{
+            status:'error',
+            type:type,
+            submitting:false
+          }
+        });
+      }
+    }else{
+      localStorage.setItem('antd-pro-authority', 'admin')
+      window.location.href='/home';
     }
+
+    // if (!err) {
+    //   this.props.dispatch({
+    //     type: 'login/login',
+    //     payload: {
+    //       ...values,
+    //       type,
+    //     },
+    //   });
+    // }
   };
 
   changeAutoLogin = e => {
@@ -51,7 +68,7 @@ export default class LoginPage extends Component {
   };
 
   render() {
-    const { login, submitting } = this.props;
+    const { login } = this.state;
     const { type } = this.state;
     return (
       <div className={styles.main}>
@@ -59,7 +76,6 @@ export default class LoginPage extends Component {
           <Tab key="account" tab="账户密码登录">
             {login.status === 'error' &&
               login.type === 'account' &&
-              !login.submitting &&
               this.renderMessage('账户或密码错误（admin/888888）')}
             <UserName name="userName" placeholder="admin/user" />
             <Password name="password" placeholder="888888/123456" />
@@ -80,7 +96,7 @@ export default class LoginPage extends Component {
               忘记密码
             </a>
           </div>
-          <Submit loading={submitting}>登录</Submit>
+          <Submit loading={login.submitting}>登录</Submit>
           <div className={styles.other}>
             其他登录方式
             <Icon className={styles.icon} type="alipay-circle" />

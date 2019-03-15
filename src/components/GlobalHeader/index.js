@@ -56,7 +56,7 @@ export default class GlobalHeader extends PureComponent {
     window.dispatchEvent(event);
   }
   render() {
-    const {
+    let {
       currentUser,
       collapsed,
       fetchingNotices,
@@ -66,6 +66,12 @@ export default class GlobalHeader extends PureComponent {
       onMenuClick,
       onNoticeClear,
     } = this.props;
+    currentUser = {
+      name: 'Mr.liu',
+      avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+      userid: '00000001',
+      notifyCount: 12,
+    }
     const menu = (
       <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
         <Menu.Item disabled>
