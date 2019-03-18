@@ -26,7 +26,7 @@ export default {
     '/api': {
       target: "https://kuhami.github.io/",
       changeOrigin: true,
-      pathRewrite: { "^/" : "" }
+      // pathRewrite: { "^/" : "" }
     }
   }
 };
