@@ -2,11 +2,15 @@ import { createElement } from 'react';
 import dynamic from 'dva/dynamic';
 import pathToRegexp from 'path-to-regexp';
 import { getMenuData } from './menu';
+
 import Home from '../routes/Home/Home';
 //dashboard
 import Analysis from '../routes/Dashboard/Analysis';
 import Monitor from '../routes/Dashboard/Monitor';
 import Workplace from '../routes/Dashboard/Workplace';
+// 表单页
+import BasicForm from '../routes/Forms/BasicForm';
+import AdvancedForm from '../routes/Forms/AdvancedForm';
 // 列表页
 import TableList from '../routes/List/TableList';
 import BasicList from '../routes/List/BasicList';
@@ -123,6 +127,7 @@ export const getRouterData = app => {
     },
     '/form/basic-form': {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/BasicForm')),
+      content:<BasicForm/>,
     },
     '/form/step-form': {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/StepForm')),
@@ -141,6 +146,7 @@ export const getRouterData = app => {
     },
     '/form/advanced-form': {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/AdvancedForm')),
+      content:<AdvancedForm/>,
     },
     '/list/table-list': {
       component: dynamicWrapper(app, ['rule'], () => import('../routes/List/TableList')),
