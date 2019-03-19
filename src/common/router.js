@@ -10,6 +10,7 @@ import Monitor from '../routes/Dashboard/Monitor';
 import Workplace from '../routes/Dashboard/Workplace';
 // 表单页
 import BasicForm from '../routes/Forms/BasicForm';
+import StepForm from '../routes/Forms/StepForm/index';
 import AdvancedForm from '../routes/Forms/AdvancedForm';
 // 列表页
 import TableList from '../routes/List/TableList';
@@ -131,6 +132,7 @@ export const getRouterData = app => {
     },
     '/form/step-form': {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/StepForm')),
+      // content:<StepForm/>
     },
     '/form/step-form/info': {
       name: '分步表单（填写转账信息）',
