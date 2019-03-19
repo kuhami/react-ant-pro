@@ -328,25 +328,25 @@ class BasicLayout extends React.PureComponent {
                 {
                   key: 'Pro 首页',
                   title: 'Pro 首页',
-                  href: 'http://pro.ant.design',
+                  href: 'https://github.com/kuhami',
                   blankTarget: true,
                 },
                 {
                   key: 'github',
                   title: <Icon type="github" />,
-                  href: 'https://github.com/ant-design/ant-design-pro',
+                  href: 'https://github.com/kuhami/react-ant-pro',
                   blankTarget: true,
                 },
                 {
-                  key: 'Ant Design',
-                  title: 'Ant Design',
-                  href: 'http://ant.design',
+                  key: 'Ant Tabs',
+                  title: 'Ant Tabs',
+                  href: 'https://github.com/kuhami',
                   blankTarget: true,
                 },
               ]}
               copyright={
                 <Fragment>
-                  Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+                  Copyright <Icon type="copyright" /> 2018 Ant Tabs体验技术部出品
                 </Fragment>
               }
             />
