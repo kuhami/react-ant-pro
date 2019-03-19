@@ -188,6 +188,10 @@ export default class SiderMenu extends PureComponent {
       openKeys: moreThanOne ? [lastOpenKey] : [...openKeys],
     });
   };
+  handleClick = (e)=>{ //点击左侧菜单
+    const { onHandlePage } = this.props;
+    onHandlePage(e)
+  }
   render() {
     const { logo, collapsed, onCollapse } = this.props;
     const { openKeys } = this.state;
@@ -223,6 +227,7 @@ export default class SiderMenu extends PureComponent {
           theme="dark"
           mode="inline"
           {...menuProps}
+          onClick={this.handleClick}
           onOpenChange={this.handleOpenChange}
           selectedKeys={selectedKeys}
           style={{ padding: '16px 0', width: '100%' }}
