@@ -7,7 +7,7 @@ import { getProfileAdvancedData } from './mock/profile';
 import { getNotices } from './mock/notices';
 import { format, delay } from 'roadhog-api-doc';
 
-// 是否禁用代理
+// 是否禁用代理noProxy:true 不使用代理
 const noProxy = process.env.NO_PROXY === 'true';
 // const noProxy = true;
 
