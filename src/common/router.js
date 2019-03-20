@@ -4,6 +4,13 @@ import pathToRegexp from 'path-to-regexp';
 import { getMenuData } from './menu';
 
 import Home from '../routes/Home/Home';
+// 社区精选组件
+import Drag from '../routes/Libraries/Drag';
+// 组件封装
+import Test from '../routes/Component/Test';
+import SelectTree from '../routes/Component/SelectTree';
+import Table from '../routes/Component/Table';
+import Hooks from '../routes/Component/Hooks';
 //dashboard
 import Analysis from '../routes/Dashboard/Analysis';
 import Monitor from '../routes/Dashboard/Monitor';
@@ -30,11 +37,6 @@ import NotFound403 from '../routes/Exception/403';
 import NotFound404 from '../routes/Exception/404';
 import NotFound500 from '../routes/Exception/500';
 import Trigger from '../routes/Exception/triggerException';
-// 学习
-import Test from '../routes/Test/Test';
-import Components from '../routes/Components/Components';
-import Table from '../routes/Table/Table';
-import Hooks from '../routes/Hooks/Hooks';
 
 let routerDataCache;
 
@@ -109,6 +111,26 @@ export const getRouterData = app => {
           component: dynamicWrapper(app, ['chart'], () => import('../routes/Home/Home')),
           content: <Home />,
       },
+    '/libraries/drag': {
+      component: dynamicWrapper(app, ['chart'], () => import('../routes/Libraries/Drag')),
+      content: <Drag />,
+    },
+    '/component/test': {
+      component: dynamicWrapper(app, [], () => import('../routes/Component/Test')),
+      content: <Test />,
+    },
+    '/component/Table': {
+      component: dynamicWrapper(app, [], () => import('../routes/Component/Table')),
+      content: <Table />,
+    },
+    '/component/SelectTree': {
+      component: dynamicWrapper(app, [], () => import('../routes/Component/SelectTree')),
+      content: <SelectTree />,
+    },
+    '/component/Hooks': {
+      component: dynamicWrapper(app, [], () => import('../routes/Component/Hooks')),
+      content: <Hooks/>,
+    },
     '/dashboard/analysis': {
       component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
       content: <Analysis />,
@@ -230,22 +252,6 @@ export const getRouterData = app => {
     // '/user/:id': {
     //   component: dynamicWrapper(app, [], () => import('../routes/User/SomeComponent')),
     // },
-    '/study/test': {
-      component: dynamicWrapper(app, [], () => import('../routes/Test/Test')),
-        content: <Test />,
-    },
-    '/study/Table': {
-      component: dynamicWrapper(app, [], () => import('../routes/Table/Table')),
-        content: <Table />,
-    },
-    '/study/Components': {
-      component: dynamicWrapper(app, [], () => import('../routes/Components/Components')),
-        content: <Components />,
-    },
-    '/study/Hooks': {
-      component: dynamicWrapper(app, [], () => import('../routes/Hooks/Hooks')),
-        content: <Hooks/>,
-    },
   };
   // Get name from ./menu.js or just set it in the router data.
   const menuData = getFlatMenuData(getMenuData());

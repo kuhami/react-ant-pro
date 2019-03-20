@@ -4,7 +4,7 @@ import { Table,Card,Tabs, Button } from 'antd';
 import TreeCheck from 'components/TreeCheck'; // aware of the relative path
 const TabPane = Tabs.TabPane;
 
-export default class Components extends Component {
+export default class SelectTree extends Component {
     constructor(props){
         super(props);
         const columns = [{
@@ -189,11 +189,11 @@ export default class Components extends Component {
 }
 
 // 组件必须传递参数
-Components.propTypes = {
+SelectTree.propTypes = {
     bordered:PropTypes.bool,
 };
 
 // 设置默认属性
-Components.defaultProps = {
+SelectTree.defaultProps = {
     bordered:true,//是否展示外边框和列边框
 };
