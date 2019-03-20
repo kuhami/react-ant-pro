@@ -8,6 +8,40 @@ const menuData = [
       hideInMenu: true,
   },
   {
+    name: '社区精选组件',//Third-Party Libraries
+    icon: 'crown',
+    path: 'libraries',
+    children: [
+      {
+        name: '拖拽',
+        path: 'drag',
+      },
+    ],
+  },
+  {
+    name: '组件封装',
+    icon: 'trophy',
+    path: 'component',
+    children: [
+      {
+        name: '测试',
+        path: 'test',
+      },
+      {
+        name: '多功能Table',
+        path: 'Table',
+      },
+      {
+        name: 'SelectTree',
+        path: 'SelectTree',
+      },
+      {
+        name: 'React Hooks',
+        path: 'Hooks',
+      },
+    ],
+  },
+  {
     name: 'dashboard',
     icon: 'dashboard',
     path: 'dashboard',
@@ -157,29 +191,6 @@ const menuData = [
       {
         name: '注册结果',
         path: 'register-result',
-      },
-    ],
-  },
-  {
-    name: '学习',
-    icon: 'trophy',
-    path: 'study',
-    children: [
-      {
-        name: '测试',
-        path: 'test',
-      },
-      {
-        name: '多功能Table',
-        path: 'Table',
-      },
-      {
-          name: '组件封装',
-          path: 'Components',
-      },
-      {
-        name: 'React Hooks',
-        path: 'Hooks',
       },
     ],
   },
