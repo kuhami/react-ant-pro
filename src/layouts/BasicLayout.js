@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Icon, message,Tabs } from 'antd';
+import { Layout, Icon, message,Tabs,Button,Dropdown,Menu } from 'antd';
 import DocumentTitle from 'react-document-title';
 import { connect } from 'dva';
 import { Route, Redirect, Switch, routerRedux } from 'dva/router';
@@ -249,6 +249,38 @@ class BasicLayout extends React.PureComponent {
     this.setState({ tabList, activeKey,tabListKey:tabList.map((va)=>va.key) });
   }
 
+  onClickHover=(e)=>{
+      console.log(e)
+    // message.info(`Click on item ${key}`);
+    let { key } = e,{activeKey,tabList,tabListKey} = this.state;
+    if(key === '1'){
+      tabList= tabList.filter((v)=>v.key !== activeKey || v.key === '/home')
+      tabListKey = tabListKey.filter((v)=>v !== activeKey || v === '/home')
+      this.setState({
+        activeKey:'/home',
+        tabList,
+        tabListKey
+      })
+    }else if(key === '2'){
+      tabList= tabList.filter((v)=>v.key === activeKey || v.key === '/home')
+      tabListKey = tabListKey.filter((v)=>v === activeKey || v === '/home')
+      this.setState({
+        activeKey,
+        tabList,
+        tabListKey
+      })
+    }else if(key === '3'){
+      tabList= tabList.filter((v)=>v.key === '/home')
+      tabListKey = tabListKey.filter((v)=>v === '/home')
+      this.setState({
+        activeKey:'/home',
+        tabList,
+        tabListKey
+      })
+    }
+
+  }
+
   render() {
      const {
       currentUser,
@@ -261,6 +293,21 @@ class BasicLayout extends React.PureComponent {
       this.state.activeKey = '/home'
       // this.props.history.push({ pathname : '/home'  })
     }
+
+    const menu = (
+      <Menu onClick={this.onClickHover}>
+        <Menu.Item key="1">关闭当前标签页</Menu.Item>
+        <Menu.Item key="2">关闭其他标签页</Menu.Item>
+        <Menu.Item key="3">关闭全部标签页</Menu.Item>
+      </Menu>
+    );
+    const operations = (
+      <Dropdown overlay={menu} >
+        <a className="ant-dropdown-link" href="#">
+          Hover me<Icon type="down" />
+        </a>
+      </Dropdown>
+    );
       const layout = (
       <Layout>
         <SiderMenu
@@ -311,7 +358,7 @@ class BasicLayout extends React.PureComponent {
                      // className={styles.tabs}
                      activeKey={this.state.activeKey}
                      onChange={this.onChange}
-                     // tabBarExtraContent={}
+                     tabBarExtraContent={operations}
                      tabBarStyle={{background:'#fff'}}
                      tabPosition="top"
                      tabBarGutter={-1}
