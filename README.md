@@ -65,7 +65,7 @@ $ npm start         # 访问 http://localhost:8000
 
 ## 体验环境
 
-体验环境：https://kuhami.github.io/react-ant-pro
+体验环境：https://kuhami.github.io/react-ant-pro 账号：admin/user 密码：888888/123456
 
 由于体验环境发出的请求针对的是不存在的记录，服务器没有进行操作会报请求错误 404 。
 
