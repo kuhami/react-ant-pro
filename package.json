@@ -45,6 +45,7 @@
     "qs": "^6.5.0",
     "rc-drawer-menu": "^0.5.0",
     "react": "^16.7.0-alpha.0",
+    "react-beautiful-dnd": "^10.1.0",
     "react-container-query": "^0.9.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.7.0-alpha.0",
