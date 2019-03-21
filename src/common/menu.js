@@ -15,7 +15,7 @@ const menuData = [
       {
         name: '拖拽',
         path: 'drag',
-      },
+      }
     ],
   },
   {
