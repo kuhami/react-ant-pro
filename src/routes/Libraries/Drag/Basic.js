@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import { Card } from 'antd';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
+
 const SortableItem = SortableElement(({value}) => <li>{value}</li>);
 const SortableList = SortableContainer(({items}) => {
   return (
@@ -13,7 +14,7 @@ const SortableList = SortableContainer(({items}) => {
     </ul>
   );
 });
-export default class Drag extends Component {
+export default class Basic extends Component {
   constructor(props){
     super(props);
     this.state = {

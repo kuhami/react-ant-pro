@@ -1,18 +1,10 @@
 import React,{Component} from 'react';
 import {render} from 'react-dom';
-import { Card } from 'antd';
-import {SortableContainer, SortableElement} from 'react-sortable-hoc';
-import arrayMove from 'array-move';
-const SortableItem = SortableElement(({value}) => <li>{value}</li>);
-const SortableList = SortableContainer(({items}) => {
-  return (
-    <ul>
-      {items.map((value, index) => (
-        <SortableItem key={`item-${index}`} index={index} value={value} />
-      ))}
-    </ul>
-  );
-});
+import { Row,Card,Col } from 'antd';
+import Basic from './Basic.js'//DragHandle.js
+import Collections from './Collections.js'
+import DragHandle from './DragHandle.js'
+
 export default class Drag extends Component {
   constructor(props){
     super(props);
@@ -23,16 +15,20 @@ export default class Drag extends Component {
   componentDidMount() {
 
   }
-  onSortEnd = ({oldIndex, newIndex}) => {
-    this.setState(({items}) => ({
-      items: arrayMove(items, oldIndex, newIndex),
-    }));
-  };
+
   render() {
-    const title = <a href="https://github.com/clauderic/react-sortable-hoc" target={'_blank'}>拖拽（react-sortable-hoc）</a>
-    return (<Card title={title}  bordered={false}>
-      <SortableList items={this.state.items} onSortEnd={this.onSortEnd} />
-    </Card>);
+
+    return (<Row gutter={24}>
+      <Col xl={6} lg={24} sm={24} xs={24}>
+        <Basic/>
+      </Col>
+      <Col xl={12} lg={12} sm={24} xs={24}>
+        <Collections/>
+      </Col>
+      <Col xl={6} lg={12} sm={24} xs={24}>
+        <DragHandle/>
+      </Col>
+    </Row>);
   }
 }
 
