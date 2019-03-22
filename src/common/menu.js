@@ -15,6 +15,10 @@ const menuData = [
       {
         name: '拖拽',
         path: 'drag',
+      },
+      {
+        name: '富文本编辑器',
+        path: 'braft-editor',
       }
     ],
   },

@@ -6,6 +6,7 @@ import { getMenuData } from './menu';
 import Home from '../routes/Home/Home';
 // 社区精选组件
 import Drag from '../routes/Libraries/Drag/index';
+import BraftEditor from '../routes/Libraries/BraftEditor';
 // 组件封装
 import Test from '../routes/Component/Test';
 import SelectTree from '../routes/Component/SelectTree';
@@ -114,6 +115,10 @@ export const getRouterData = app => {
     '/libraries/drag': {
       component: dynamicWrapper(app, ['chart'], () => import('../routes/Libraries/Drag/index')),
       content: <Drag />,
+    },
+    '/libraries/braft-editor': {
+      component: dynamicWrapper(app, ['chart'], () => import('../routes/Libraries/BraftEditor')),
+      content: <BraftEditor />,
     },
     '/component/test': {
       component: dynamicWrapper(app, [], () => import('../routes/Component/Test')),
