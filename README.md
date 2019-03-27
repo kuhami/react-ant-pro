@@ -4,6 +4,12 @@
 <img src="https://raw.githubusercontent.com/kuhami/react-ant-pro/master/public/image/ant.jpeg"/>
 </div>
 
+## 体验环境
+
+体验环境：https://kuhami.github.io/react-ant-pro 账号：admin/user 密码：888888/123456
+
+由于体验环境发出的请求针对的是不存在的记录，服务器没有进行操作会报请求错误 404 。
+
 ## 特性gh-pages
 
 - :gem: **优雅美观**：基于 Ant Tabs 体系精心设计
@@ -62,12 +68,6 @@ $ npm start         # 访问 http://localhost:8000
 ```
 
 更多信息请参考 [使用文档](https://pro.ant.design/docs/getting-started)。
-
-## 体验环境
-
-体验环境：https://kuhami.github.io/react-ant-pro 账号：admin/user 密码：888888/123456
-
-由于体验环境发出的请求针对的是不存在的记录，服务器没有进行操作会报请求错误 404 。
 
 ## 参与贡献
 
