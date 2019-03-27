@@ -4,7 +4,13 @@
 <img src="https://raw.githubusercontent.com/kuhami/react-ant-pro/master/public/image/ant.jpeg"/>
 </div>
 
-## 特性
+## 体验环境
+
+体验环境：https://kuhami.github.io/react-ant-pro 账号：admin/user 密码：888888/123456
+
+由于体验环境发出的请求针对的是不存在的记录，服务器没有进行操作会报请求错误 404 。
+
+## 特性gh-pages
 
 - :gem: **优雅美观**：基于 Ant Tabs 体系精心设计
 - :triangular_ruler: **常见设计模式**：提炼自中后台应用的典型页面和场景
@@ -19,6 +25,13 @@
 ## 模板
 
 ```
+- 社区精选组件
+  - 拖拽
+  - 富文本编译器
+- 组件封装
+  - 多功能Table
+  - SelectTree
+  - React hooks
 - Dashboard
   - 分析页
   - 监控页
@@ -46,8 +59,6 @@
   - 404 找不到
   - 500 服务器出错
 - 帐户
-  - 登录
-  - 注册
   - 注册成功
 ```
 
@@ -62,12 +73,6 @@ $ npm start         # 访问 http://localhost:8000
 ```
 
 更多信息请参考 [使用文档](https://pro.ant.design/docs/getting-started)。
-
-## 体验环境
-
-体验环境：https://kuhami.github.io/react-ant-pro 账号：admin/user 密码：888888/123456
-
-由于体验环境发出的请求针对的是不存在的记录，服务器没有进行操作会报请求错误 404 。
 
 ## 参与贡献
 
