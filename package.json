@@ -1,7 +1,7 @@
 {
-  "name": "ant-design-pro",
+  "name": "ant-tabs",
   "version": "1.2.1",
-  "description": "An out-of-box UI solution for enterprise applications",
+  "description": "（基于pro 1.0）基于Ant Design Pro 后台项目修改的多标签页tabs(多标签tabs、拖拽、富文本、多功能table、多选Select、React Hooks)",
   "homepage": "https://kuhami.github.io/react-ant-pro",
   "private": true,
   "scripts": {
